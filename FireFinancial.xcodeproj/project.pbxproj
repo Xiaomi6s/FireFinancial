@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF45430D030F2ADF3D71B2F /* libPods-FireFinancial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */; };
 		599057081F32D36E00255F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057071F32D36E00255F25 /* main.m */; };
 		5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990570A1F32D36E00255F25 /* AppDelegate.m */; };
 		5990570E1F32D36E00255F25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990570D1F32D36E00255F25 /* ViewController.m */; };
@@ -15,6 +16,10 @@
 		599057161F32D36E00255F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599057141F32D36E00255F25 /* LaunchScreen.storyboard */; };
 		599057211F32D36E00255F25 /* FireFinancialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057201F32D36E00255F25 /* FireFinancialTests.m */; };
 		5990572C1F32D36E00255F25 /* FireFinancialUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990572B1F32D36E00255F25 /* FireFinancialUITests.m */; };
+		5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057471F32D43C00255F25 /* FFBasicApi.m */; };
+		5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057491F32D43C00255F25 /* FFRequestAgent.m */; };
+		599057501F32D43C00255F25 /* FFResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574B1F32D43C00255F25 /* FFResponseObject.m */; };
+		599057511F32D43D00255F25 /* FFServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574D1F32D43C00255F25 /* FFServerConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FireFinancial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.debug.xcconfig"; sourceTree = "<group>"; };
 		599057031F32D36E00255F25 /* FireFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		599057071F32D36E00255F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		599057091F32D36E00255F25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 		599057271F32D36E00255F25 /* FireFinancialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireFinancialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5990572B1F32D36E00255F25 /* FireFinancialUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireFinancialUITests.m; sourceTree = "<group>"; };
 		5990572D1F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		599057461F32D43C00255F25 /* FFBasicApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBasicApi.h; sourceTree = "<group>"; };
+		599057471F32D43C00255F25 /* FFBasicApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBasicApi.m; sourceTree = "<group>"; };
+		599057481F32D43C00255F25 /* FFRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestAgent.h; sourceTree = "<group>"; };
+		599057491F32D43C00255F25 /* FFRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestAgent.m; sourceTree = "<group>"; };
+		5990574A1F32D43C00255F25 /* FFResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFResponseObject.h; sourceTree = "<group>"; };
+		5990574B1F32D43C00255F25 /* FFResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFResponseObject.m; sourceTree = "<group>"; };
+		5990574C1F32D43C00255F25 /* FFServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFServerConfig.h; sourceTree = "<group>"; };
+		5990574D1F32D43C00255F25 /* FFServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFServerConfig.m; sourceTree = "<group>"; };
+		F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF45430D030F2ADF3D71B2F /* libPods-FireFinancial.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,8 @@
 				5990571F1F32D36E00255F25 /* FireFinancialTests */,
 				5990572A1F32D36E00255F25 /* FireFinancialUITests */,
 				599057041F32D36E00255F25 /* Products */,
+				67B8D45E7BD1A54B2B0153A9 /* Pods */,
+				B9A2F837C90F62E94AA4A8E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +120,7 @@
 		599057051F32D36E00255F25 /* FireFinancial */ = {
 			isa = PBXGroup;
 			children = (
+				599057391F32D3C200255F25 /* FFNetWorking */,
 				599057091F32D36E00255F25 /* AppDelegate.h */,
 				5990570A1F32D36E00255F25 /* AppDelegate.m */,
 				5990570C1F32D36E00255F25 /* ViewController.h */,
@@ -140,6 +160,38 @@
 			path = FireFinancialUITests;
 			sourceTree = "<group>";
 		};
+		599057391F32D3C200255F25 /* FFNetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				599057461F32D43C00255F25 /* FFBasicApi.h */,
+				599057471F32D43C00255F25 /* FFBasicApi.m */,
+				599057481F32D43C00255F25 /* FFRequestAgent.h */,
+				599057491F32D43C00255F25 /* FFRequestAgent.m */,
+				5990574A1F32D43C00255F25 /* FFResponseObject.h */,
+				5990574B1F32D43C00255F25 /* FFResponseObject.m */,
+				5990574C1F32D43C00255F25 /* FFServerConfig.h */,
+				5990574D1F32D43C00255F25 /* FFServerConfig.m */,
+			);
+			path = FFNetWorking;
+			sourceTree = "<group>";
+		};
+		67B8D45E7BD1A54B2B0153A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */,
+				F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9A2F837C90F62E94AA4A8E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 599057301F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancial" */;
 			buildPhases = (
+				E1DDFDF4A6BBACC70FAD4B59 /* [CP] Check Pods Manifest.lock */,
 				599056FF1F32D36E00255F25 /* Sources */,
 				599057001F32D36E00255F25 /* Frameworks */,
 				599057011F32D36E00255F25 /* Resources */,
+				D99E46646E2600F77F2C729E /* [CP] Embed Pods Frameworks */,
+				8B6EE6DC67785DB4E6120C25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +326,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B6EE6DC67785DB4E6120C25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D99E46646E2600F77F2C729E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1DDFDF4A6BBACC70FAD4B59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireFinancial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		599056FF1F32D36E00255F25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -278,7 +384,11 @@
 			files = (
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
 				5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
+				599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
+				5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */,
 				599057081F32D36E00255F25 /* main.m in Sources */,
+				5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */,
+				599057501F32D43C00255F25 /* FFResponseObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +535,7 @@
 		};
 		599057311F32D36E00255F25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DRJ42M455V;
@@ -437,6 +548,7 @@
 		};
 		599057321F32D36E00255F25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DRJ42M455V;
