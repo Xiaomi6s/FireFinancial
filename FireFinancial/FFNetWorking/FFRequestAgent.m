@@ -8,7 +8,7 @@
 
 #import "FFRequestAgent.h"
 #import "FFServerConfig.h"
-
+#import "NSURLSessionDataTask+FF.h"
 @implementation FSRequestAgent
 
 + (instancetype)shareInstance {
@@ -54,6 +54,7 @@
                                                  finished(FSRequestStatusFail, resopnseOb);
        
    }];
+    task.taskTag = postUrl;
     [self.tasks addObject:task];
 }
 
@@ -97,5 +98,17 @@
     [self.tasks removeAllObjects];
 }
 
+- (void)removeTaskWithTaskTag:(NSString *)taskTag {
+    NSURLSessionDataTask *removeTask;
+    for (NSURLSessionDataTask *task in self.tasks) {
+        if ([task.taskTag isEqualToString:taskTag]) {
+            [task cancel];
+            removeTask = task;
+        }
+    }
+    if (removeTask) {
+        [self.tasks removeObject:removeTask];
+    }
+}
 
 @end

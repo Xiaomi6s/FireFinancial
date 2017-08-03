@@ -20,6 +20,8 @@
 		5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057491F32D43C00255F25 /* FFRequestAgent.m */; };
 		599057501F32D43C00255F25 /* FFResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574B1F32D43C00255F25 /* FFResponseObject.m */; };
 		599057511F32D43D00255F25 /* FFServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574D1F32D43C00255F25 /* FFServerConfig.m */; };
+		59ABF91D1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABF91C1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m */; };
+		59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		5990574B1F32D43C00255F25 /* FFResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFResponseObject.m; sourceTree = "<group>"; };
 		5990574C1F32D43C00255F25 /* FFServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFServerConfig.h; sourceTree = "<group>"; };
 		5990574D1F32D43C00255F25 /* FFServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFServerConfig.m; sourceTree = "<group>"; };
+		59ABF91B1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionDataTask+FF.h"; sourceTree = "<group>"; };
+		59ABF91C1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionDataTask+FF.m"; sourceTree = "<group>"; };
+		59ABF91E1F32F0900044E2D9 /* FFRequestCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFRequestCache.h; sourceTree = "<group>"; };
+		59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFRequestCache.m; sourceTree = "<group>"; };
 		F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,12 +171,16 @@
 			children = (
 				599057461F32D43C00255F25 /* FFBasicApi.h */,
 				599057471F32D43C00255F25 /* FFBasicApi.m */,
+				59ABF91E1F32F0900044E2D9 /* FFRequestCache.h */,
+				59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */,
 				599057481F32D43C00255F25 /* FFRequestAgent.h */,
 				599057491F32D43C00255F25 /* FFRequestAgent.m */,
 				5990574A1F32D43C00255F25 /* FFResponseObject.h */,
 				5990574B1F32D43C00255F25 /* FFResponseObject.m */,
 				5990574C1F32D43C00255F25 /* FFServerConfig.h */,
 				5990574D1F32D43C00255F25 /* FFServerConfig.m */,
+				59ABF91B1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.h */,
+				59ABF91C1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m */,
 			);
 			path = FFNetWorking;
 			sourceTree = "<group>";
@@ -382,10 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59ABF91D1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m in Sources */,
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
 				5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
 				599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
 				5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */,
+				59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */,
 				599057081F32D36E00255F25 /* main.m in Sources */,
 				5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */,
 				599057501F32D43C00255F25 /* FFResponseObject.m in Sources */,
@@ -628,6 +640,7 @@
 				599057321F32D36E00255F25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		599057331F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialTests" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +649,7 @@
 				599057351F32D36E00255F25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		599057361F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialUITests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +658,7 @@
 				599057381F32D36E00255F25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
