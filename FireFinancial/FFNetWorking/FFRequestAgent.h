@@ -9,15 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 #import "FFResponseObject.h"
+#import "FFRequestTypedef.h"
 
-typedef enum : NSUInteger {
-    FSRequestStatusSuccess = 0, //请求成功
-    FSRequestStatusFail         //请求失败
-} FSRequestStatus;
+@interface FFRequestAgent : NSObject
 
-typedef void (^FinishedBlock)(FSRequestStatus status, FSResponseObject *response);
+/**
+ 初始化一个单例
 
-@interface FSRequestAgent : NSObject
+ @return instance
+ */
++ (instancetype)shareInstance;
 
 /**
  请求管理对象
@@ -54,5 +55,8 @@ typedef void (^FinishedBlock)(FSRequestStatus status, FSResponseObject *response
                         parameters:(id)parameters
                          infoclass:(Class)infoclass
                           finished:(FinishedBlock)finished;
+
+- (void)removeAllTask;
+- (void)removeTaskWithTaskTag:(NSString *)taskTag;
 
 @end

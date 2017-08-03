@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FSResponseObject : NSObject
+@interface FFResponseObject : NSObject
 
 
 /**

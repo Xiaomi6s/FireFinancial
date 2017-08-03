@@ -9,10 +9,10 @@
 #import "FFRequestAgent.h"
 #import "FFServerConfig.h"
 #import "NSURLSessionDataTask+FF.h"
-@implementation FSRequestAgent
+@implementation FFRequestAgent
 
 + (instancetype)shareInstance {
-    static FSRequestAgent *instance;
+    static FFRequestAgent *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
@@ -33,7 +33,7 @@
                   infoclass:(Class)infoclass
                    finished:(FinishedBlock)finished  {
     __weak typeof(self) wself = self;
-    FSServerConfig *config = [FSServerConfig instance];
+    FFServerConfig *config = [FFServerConfig instance];
     NSString *postUrl = [[config.serverIP stringByAppendingString:config.apiVersion]
                          stringByAppendingString:url];
     NSURLSessionDataTask *task = [self.manager POST:postUrl
@@ -42,16 +42,12 @@
    }
                                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                 [wself.tasks removeObject:task];
-                                                FSResponseObject *resopnseOb = [FSResponseObject instanceWithReturnObject:responseObject
-                                                                                                                infoClass:infoclass];
-                                                finished(FSRequestStatusSuccess, resopnseOb);
+                                                finished(FFRequestStatusSuccess, responseObject);
        
    }
                                             failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                                 [wself.tasks removeObject:task];
-                                                FSResponseObject *resopnseOb = [FSResponseObject instanceWithReturnObject:error
-                                                                                                                infoClass:infoclass];
-                                                 finished(FSRequestStatusFail, resopnseOb);
+                                                 finished(FFRequestStatusFail, error);
        
    }];
     task.taskTag = postUrl;
@@ -63,22 +59,18 @@
                          infoclass:(Class)infoclass
                           finished:(FinishedBlock)finished{
     __weak typeof(self) wself = self;
-    FSServerConfig *config = [FSServerConfig instance];
+    FFServerConfig *config = [FFServerConfig instance];
     NSString *getUrl = [[config.serverIP stringByAppendingString:config.apiVersion]
                          stringByAppendingString:url];
     NSURLSessionDataTask *task = [self.manager GET:getUrl parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [wself.tasks removeObject:task];
-        FSResponseObject *resopnseOb = [FSResponseObject instanceWithReturnObject:responseObject
-                                                                        infoClass:infoclass];
-        finished(FSRequestStatusSuccess, resopnseOb);
+        finished(FFRequestStatusSuccess, responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [wself.tasks removeObject:task];
-        FSResponseObject *resopnseOb = [FSResponseObject instanceWithReturnObject:error
-                                                                        infoClass:infoclass];
-        finished(FSRequestStatusFail, resopnseOb);
+        finished(FFRequestStatusFail, error);
     }];
     [self.tasks addObject:task];
     

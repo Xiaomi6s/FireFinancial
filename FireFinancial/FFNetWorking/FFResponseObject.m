@@ -9,7 +9,7 @@
 #import "FFResponseObject.h"
 #import <MJExtension/MJExtension.h>
 
-@implementation FSResponseObject
+@implementation FFResponseObject
 
 + (instancetype)instanceWithReturnObject:(id)returnObject infoClass:(Class)infoClass {
     return [[self alloc] initWithRetunObject:returnObject infoClass:infoClass];

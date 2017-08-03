@@ -8,10 +8,10 @@
 
 #import "FFServerConfig.h"
 
-@implementation FSServerConfig
+@implementation FFServerConfig
 
 + (instancetype)instance {
-    static FSServerConfig *instance;
+    static FFServerConfig *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];

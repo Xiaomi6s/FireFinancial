@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FSServerConfig : NSObject
+@interface FFServerConfig : NSObject
 
 @property(nonatomic, copy) NSString *serverIP;
 @property(nonatomic, copy) NSString *apiVersion;
