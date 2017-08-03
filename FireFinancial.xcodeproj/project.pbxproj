@@ -24,6 +24,11 @@
 		599057511F32D43D00255F25 /* FFServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574D1F32D43C00255F25 /* FFServerConfig.m */; };
 		59ABF91D1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABF91C1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m */; };
 		59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */; };
+		C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
+		C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
+		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
+		C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DC1F330440007333B6 /* UIView+FFExtension.m */; };
+		C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +235,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C79031CF1F32FA40007333B6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C79031D11F32FA9C007333B6 /* Tool */,
+				C79031D01F32FA8B007333B6 /* Category */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C79031D01F32FA8B007333B6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C79031D51F32FB93007333B6 /* NSString+FFExtension.h */,
+				C79031D61F32FB93007333B6 /* NSString+FFExtension.m */,
+				C79031D81F32FF26007333B6 /* UIColor+FFExtension.h */,
+				C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */,
+				C79031DB1F330440007333B6 /* UIView+FFExtension.h */,
+				C79031DC1F330440007333B6 /* UIView+FFExtension.m */,
+				C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */,
+				C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C79031D11F32FA9C007333B6 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				C79031D21F32FAB2007333B6 /* FFUtil.h */,
+				C79031D31F32FAB2007333B6 /* FFUtil.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,13 +458,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */,
 				59ABF91D1F32EEB50044E2D9 /* NSURLSessionDataTask+FF.m in Sources */,
 				591F45601F331D6D00612927 /* MBProgressHUD+FFXJ.m in Sources */,
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
 				591F455C1F3314F800612927 /* FFCacheManger.m in Sources */,
 				5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
 				599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
+				C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */,
 				5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */,
+				C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */,
+				C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */,
 				59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */,
 				599057081F32D36E00255F25 /* main.m in Sources */,
 				5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */,
@@ -586,6 +628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,6 +643,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
