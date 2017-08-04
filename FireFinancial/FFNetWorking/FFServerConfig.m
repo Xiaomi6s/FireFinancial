@@ -8,8 +8,8 @@
 
 #import "FFServerConfig.h"
 
-static NSString *const releaseServerIP = @"https://newhuo.yonglibao.com";
-static NSString *const debugServerIP = @"http://hlctest.yonglibao.com";
+static NSString *const releaseServerIP = @"https://newhuo.yonglibao.com";//线上环境
+static NSString *const debugServerIP = @"http://hlctest.yonglibao.com"; //测试环境
 
 @implementation FFServerConfig
 

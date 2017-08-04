@@ -17,7 +17,7 @@ static NSString * const homeApi = @"/Home/finance";
 - (void)getHomefinished:(FinishedBlock)finished {
     
     [self asyncPostRequestWithUrl:homeApi parameters:nil infoclass:nil finished:^(FFRequestStatus status, id response) {
-        
+        finished(status, response);
     }];
 }
 
