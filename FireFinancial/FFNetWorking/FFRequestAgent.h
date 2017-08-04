@@ -43,18 +43,6 @@
                      parameters:(id)parameters
                       infoclass:(Class)infoclass
                        finished:(FinishedBlock)finished;
-/**
- 发起一个异步get请求
- 
- @param url url
- @param parameters 参数
- @param infoclass 返回json对应的model类
- @param finished 回调
- */
-- (void)asyncGetRequestWithWithUrl:(NSString *)url
-                        parameters:(id)parameters
-                         infoclass:(Class)infoclass
-                          finished:(FinishedBlock)finished;
 
 - (void)removeAllTask;
 - (void)removeTaskWithTaskTag:(NSString *)taskTag;

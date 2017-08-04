@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  FireFinancial
+//
+//  Created by 任晓健 on 2017/8/4.
+//  Copyright © 2017年 rxj. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifndef DEBUG
+#undef NSLog
+#define NSLog(args, ...)
+#endif
+
+
+#endif /* PrefixHeader_pch */

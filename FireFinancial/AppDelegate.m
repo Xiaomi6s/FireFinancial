@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "FFServerConfig.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [FFServerConfig instance];
     return YES;
 }
 

@@ -8,7 +8,6 @@
 
 #import "FFRequestAgent.h"
 #import "FFServerConfig.h"
-#import "NSURLSessionDataTask+FF.h"
 @implementation FFRequestAgent
 
 + (instancetype)shareInstance {
@@ -36,44 +35,24 @@
     FFServerConfig *config = [FFServerConfig instance];
     NSString *postUrl = [[config.serverIP stringByAppendingString:config.apiVersion]
                          stringByAppendingString:url];
+    NSLog(@"发起请求--%@",postUrl);
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
     NSURLSessionDataTask *task = [self.manager POST:postUrl
                                          parameters:parameters
                                            progress:^(NSProgress * _Nonnull uploadProgress) {
    }
                                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                [wself.tasks removeObject:task];
+                                                [wself.tasks removeObject:dict];
                                                 finished(FFRequestStatusSuccess, responseObject);
        
    }
                                             failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                                [wself.tasks removeObject:task];
+                                                [wself.tasks removeObject:dict];
                                                  finished(FFRequestStatusFail, error);
        
    }];
-    task.taskTag = postUrl;
-    [self.tasks addObject:task];
-}
-
-- (void)asyncGetRequestWithWithUrl:(NSString *)url
-                        parameters:(id)parameters
-                         infoclass:(Class)infoclass
-                          finished:(FinishedBlock)finished{
-    __weak typeof(self) wself = self;
-    FFServerConfig *config = [FFServerConfig instance];
-    NSString *getUrl = [[config.serverIP stringByAppendingString:config.apiVersion]
-                         stringByAppendingString:url];
-    NSURLSessionDataTask *task = [self.manager GET:getUrl parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [wself.tasks removeObject:task];
-        finished(FFRequestStatusSuccess, responseObject);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [wself.tasks removeObject:task];
-        finished(FFRequestStatusFail, error);
-    }];
-    [self.tasks addObject:task];
-    
+    [dict setObject:task forKey:@(url.hash)];
+    [self.tasks addObject:dict];
 }
 
 - (void)removeTask:(NSURLSessionDataTask*)task {
@@ -84,7 +63,8 @@
 }
 
 - (void)removeAllTask {
-    for (NSURLSessionDataTask *task in self.tasks) {
+    for (NSDictionary *dict in self.tasks) {
+        NSURLSessionDataTask *task = dict.allValues.firstObject;
         [task cancel];
     }
     [self.tasks removeAllObjects];
@@ -92,10 +72,10 @@
 
 - (void)removeTaskWithTaskTag:(NSString *)taskTag {
     NSURLSessionDataTask *removeTask;
-    for (NSURLSessionDataTask *task in self.tasks) {
-        if ([task.taskTag isEqualToString:taskTag]) {
-            [task cancel];
-            removeTask = task;
+    for (NSDictionary *dict in self.tasks) {
+        removeTask = dict[@(taskTag.hash)];
+        if (removeTask) {
+            [removeTask cancel];
         }
     }
     if (removeTask) {

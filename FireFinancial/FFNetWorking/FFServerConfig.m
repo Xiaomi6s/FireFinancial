@@ -8,6 +8,9 @@
 
 #import "FFServerConfig.h"
 
+static NSString *const releaseServerIP = @"https://newhuo.yonglibao.com";
+static NSString *const debugServerIP = @"http://hlctest.yonglibao.com";
+
 @implementation FFServerConfig
 
 + (instancetype)instance {
@@ -15,8 +18,18 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
+        instance.apiVersion = @"/v2";
+        [instance setupServerIP];
     });
     return instance;
+}
+
+- (void)setupServerIP {
+#ifdef DEBUG
+    self.serverIP = releaseServerIP;
+#else
+    self.serverIP = debugServerIP;
+#endif
 }
 
 @end
