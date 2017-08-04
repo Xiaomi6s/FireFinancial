@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FFServerConfig.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end

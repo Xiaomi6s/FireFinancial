@@ -17,6 +17,7 @@
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.label.text = @"加载中...";
     hud.label.textColor = [UIColor whiteColor];
+    hud.label.font = [UIFont systemFontOfSize:14];
     hud.bezelView.color = [UIColor colorWithWhite:0 alpha:0.8];
     [hud showAnimated:YES];
     

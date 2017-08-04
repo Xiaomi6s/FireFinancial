@@ -22,19 +22,21 @@
     [homeApi getHomefinished:^(FFRequestStatus status, id response) {
         
     }];
+    
+//    [self performSelector:@selector(after) withObject:nil afterDelay:1];
+   
+}
+
+- (void)after {
+    HomeApi *homeApi = [HomeApi new];
     [homeApi getHomefinished:^(FFRequestStatus status, id response) {
         
     }];
-    [homeApi getHomefinished:^(FFRequestStatus status, id response) {
-        
-    }];
-    [homeApi getHomefinished:^(FFRequestStatus status, id response) {
-        
-    }];
-    [homeApi getHomefinished:^(FFRequestStatus status, id response) {
-        
-    }];
- 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+   
 }
 
 - (void)didReceiveMemoryWarning {
