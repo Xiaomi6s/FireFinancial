@@ -40,6 +40,6 @@
  *
  *  @return UIColor
  */
-+ (UIColor *)colorWithHexString:(NSString *)colorString;
++ (UIColor *)colorWithHex:(NSString *)colorString;
 
 @end

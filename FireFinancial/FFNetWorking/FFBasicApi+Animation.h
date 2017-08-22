@@ -12,5 +12,7 @@
 @interface FFBasicApi (Animation)
 
 - (void)loadingAnimationInView:(UIView *)view;
+- (UIViewController *)getCurrentVC;
+- (UIView *)viewOfcurrentVC;
 
 @end
