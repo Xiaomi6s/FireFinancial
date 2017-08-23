@@ -27,6 +27,9 @@
 
 #import "NSString+FFExtension.h"
 
+#pragma mark - models
+#import "FFUserInfo.h"
+
 
 
 #endif /* FFImportFile_h */

@@ -7,16 +7,26 @@
 //
 
 #import "FFUserApi.h"
-#import "NSString+FFExtension.h"
-#import "FFUserInfo.h"
 
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
 static NSString * const realNameApi = @"/user/realName";
 static NSString * const registerApi = @"/user/register";
-
+static NSString * const registerShowApi = @"/user/registerShow";
+static NSString * const getValidateCodeApi = @"/user/getValidateCode";
 
 @implementation FFUserApi
+
+/**
+ 注册顶部tips
+ 
+ @param finished 回调
+ */
+- (void)registerShowWithReturnBlock:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:registerShowApi parameters:nil infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
 
 /**
  注册接口
@@ -34,14 +44,62 @@ static NSString * const registerApi = @"/user/register";
                  nickName:(NSString *)nickName
             recommendCode:(NSString *)recommendCode
               returnBlock:(FinishedBlock)finished {
+    
     NSDictionary *param = @{@"phone":([NSString stringIsEmpty:phone] ? @"" : phone),
                             @"password":([NSString stringIsEmpty:password] ? @"" : password),
                             @"vcode":([NSString stringIsEmpty:vcode] ? @"" : vcode),
                             @"nickName":([NSString stringIsEmpty:nickName] ? @"" : nickName),
                             @"recommendCode":([NSString stringIsEmpty:recommendCode] ? @"" : recommendCode)};
+
+    
     [self asyncPostRequestWithUrl:registerApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
+}
+
+/**
+ 登录接口
+ 
+ @param phone 手机号
+ @param password 密码
+ @param finished 回调
+ */
+- (void)loginWithPhone:(NSString *)phone
+              password:(NSString *)password
+           returnBlock:(FinishedBlock)finished {
+    
+    NSDictionary *param = @{@"phone":phone,@"password":password};
+    
+    [self asyncPostRequestWithUrl:registerApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+    
+}
+
+/**
+ 获取短信验证码
+ 
+ @param phone 手机号
+ @param imageCode 图形验证码
+ @param type 类型
+ 1.注册时候点击获取验证码 获取图形验证码
+ 2.图形验证码确定之后,获取注册验证码
+ 3.已登录主动修改登录密码时获取验证码
+ 4.未登录忘记密码,获取验证码
+ 
+ @param finished 回调
+ */
+- (void)getValidateCodeWithPhone:(NSString *)phone
+                       imageCode:(NSString *)imageCode
+                            type:(NSString *)type
+                     returnBlock:(FinishedBlock)finished {
+    
+    NSDictionary *param = @{@"phone":phone,@"imageCode":imageCode,@"type":type};
+    
+    [self asyncPostRequestWithUrl:getValidateCodeApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+    
 }
 
 /**
