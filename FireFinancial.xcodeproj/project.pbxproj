@@ -41,6 +41,9 @@
 		59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D108C21F41A8DF00065F47 /* FFBasicVC.m */; };
 		59D108C61F41A90500065F47 /* FFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D108C51F41A90500065F47 /* FFNavController.m */; };
 		59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */; };
+		C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB6C1F4D5377004D72E2 /* FFUserApi.m */; };
+		C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */; };
+		C705CB791F4D5D23004D72E2 /* FFUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB781F4D5D23004D72E2 /* FFUserInfo.m */; };
 		C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
 		C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
 		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
@@ -136,6 +139,12 @@
 		59D38BC21F4C0A2D00EFC08C /* FFImportFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFImportFile.h; sourceTree = "<group>"; };
 		59D38BC31F4C104C00EFC08C /* NSLayoutConstraint+FFExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FFExtension.h"; sourceTree = "<group>"; };
 		59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FFExtension.m"; sourceTree = "<group>"; };
+		C705CB6B1F4D5377004D72E2 /* FFUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserApi.h; sourceTree = "<group>"; };
+		C705CB6C1F4D5377004D72E2 /* FFUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserApi.m; sourceTree = "<group>"; };
+		C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFBasicInfo.h; path = FireFinancial/Apis/FFBasicInfo.h; sourceTree = SOURCE_ROOT; };
+		C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFBasicInfo.m; path = FireFinancial/Apis/FFBasicInfo.m; sourceTree = SOURCE_ROOT; };
+		C705CB771F4D5D23004D72E2 /* FFUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFUserInfo.h; path = FireFinancial/Apis/FFUserInfo.h; sourceTree = SOURCE_ROOT; };
+		C705CB781F4D5D23004D72E2 /* FFUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFUserInfo.m; path = FireFinancial/Apis/FFUserInfo.m; sourceTree = SOURCE_ROOT; };
 		C79031D21F32FAB2007333B6 /* FFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtil.h; sourceTree = "<group>"; };
 		C79031D31F32FAB2007333B6 /* FFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtil.m; sourceTree = "<group>"; };
 		C79031D51F32FB93007333B6 /* NSString+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFExtension.h"; sourceTree = "<group>"; };
@@ -201,6 +210,10 @@
 		593D3A0F1F4D2E1F00E4912F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */,
+				C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */,
+				C705CB771F4D5D23004D72E2 /* FFUserInfo.h */,
+				C705CB781F4D5D23004D72E2 /* FFUserInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -602,6 +615,7 @@
 				C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */,
 				C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */,
 				591F45631F33233A00612927 /* FFCacheManger.m in Sources */,
+				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
 				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
 				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
@@ -628,6 +642,8 @@
 				59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */,
 				593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */,
 				59D108C61F41A90500065F47 /* FFNavController.m in Sources */,
+				C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */,
+				C705CB791F4D5D23004D72E2 /* FFUserInfo.m in Sources */,
 				59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */,
 				59BFCB541F4D539500CB8CB0 /* APITestVC.m in Sources */,
 			);

@@ -25,6 +25,8 @@
 #import "UIView+FFExtension.h"
 #import "NSLayoutConstraint+FFExtension.h"
 
+#import "NSString+FFExtension.h"
+
 
 
 #endif /* FFImportFile_h */
