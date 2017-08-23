@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>apiModel</key>
+		<string>about</string>
+		<key>apis</key>
+		<array>
+			<dict>
+				<key>apiName</key>
+				<string>配置相关</string>
+				<key>apiurl</key>
+				<string>appConfig</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>apiModel</key>
+		<string>accountLog</string>
+		<key>apis</key>
+		<array>
+			<dict>
+				<key>apiName</key>
+				<string>每日收益</string>
+				<key>apiurl</key>
+				<string>earningsList</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>apiModel</key>
+		<string>activity</string>
+		<key>apis</key>
+		<array>
+			<dict>
+				<key>apiName</key>
+				<string>活动中心列表</string>
+				<key>apiurl</key>
+				<string>activityList</string>
+			</dict>
+			<dict>
+				<key>apiName</key>
+				<string>记录分享</string>
+				<key>apiurl</key>
+				<string>activityShareReturn</string>
+			</dict>
+			<dict>
+				<key>apiName</key>
+				<string>活动中心分享</string>
+				<key>apiurl</key>
+				<string>activityShare</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

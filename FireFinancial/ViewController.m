@@ -9,10 +9,10 @@
 #import "ViewController.h"
 #import "MBProgressHUD+FFXJ.h"
 #import "FFBasicApi.h"
-#import "HomeApi.h"
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, copy) NSArray *apis;
 
 @end
 
@@ -20,7 +20,7 @@
 
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
     }
@@ -30,23 +30,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"apis";
+    [self loadData];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
+    UIImage *img = [UIImage imageNamed:@"11"];
+    NSData *data = UIImagePNGRepresentation(img);
+    DLog(@"%ld",data.length / 1024);
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-   
+- (void)loadData {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"apis" ofType:@"plist"];
+    if (filePath) {
+        self.apis = [NSArray arrayWithContentsOfFile:filePath];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 6;
+    return self.apis.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    NSArray *mApis = self.apis[section][@"apis"];
+    return mApis.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,8 +62,14 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld-%ld",indexPath.section, indexPath.row];
+    NSArray *mApis = self.apis[indexPath.section][@"apis"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@(%@)",self.apis[indexPath.section][@"apiModel"], mApis[indexPath.row][@"apiurl"], mApis[indexPath.row][@"apiName"]];
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *title = self.apis[section][@"apiModel"];
+    return title;
 }
 
 

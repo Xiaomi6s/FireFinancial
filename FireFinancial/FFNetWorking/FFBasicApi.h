@@ -16,6 +16,7 @@ typedef void(^CacheBlock)(id responseObject);
 @interface FFBasicApi : NSObject
 
 @property(nonatomic, assign)BOOL isCache;
+@property(nonatomic, assign) BOOL isLoadingAnimtion;
 
 
 /**

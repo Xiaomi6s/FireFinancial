@@ -9,12 +9,16 @@
 #import "FFBasicApi.h"
 #import "FFRequestAgent.h"
 #import "FFRequestCache.h"
+#import "FFBasicApi+Animation.h"
 @implementation FFBasicApi
 
 - (void)asyncPostRequestWithUrl:(NSString *)url
                      parameters:(id)parameters
                       infoclass:(Class)infoclass
                        finished:(FinishedBlock)finished {
+    if (self.isLoadingAnimtion) {
+        [self loadingAnimationInView:[self viewOfcurrentVC]];
+    }
     [[FFRequestAgent shareInstance] asyncPostRequestWithUrl:url
                                                  parameters:parameters
                                                   infoclass:infoclass finished:^(FFRequestStatus status, id response) {
