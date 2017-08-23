@@ -170,6 +170,7 @@
 		59054B0E1F3416B100097FB5 /* Apis */ = {
 			isa = PBXGroup;
 			children = (
+				593D3A0F1F4D2E1F00E4912F /* Models */,
 				59054B0F1F3416CC00097FB5 /* HomeApi.h */,
 				59054B101F3416CC00097FB5 /* HomeApi.m */,
 			);
@@ -185,6 +186,13 @@
 			name = ThridExtension;
 			path = FireFinancial/ThridExtension;
 			sourceTree = SOURCE_ROOT;
+		};
+		593D3A0F1F4D2E1F00E4912F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
 		};
 		598C3F831F4BD895000ED8F1 /* CustomCommonUI */ = {
 			isa = PBXGroup;

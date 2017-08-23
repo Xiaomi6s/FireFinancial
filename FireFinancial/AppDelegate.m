@@ -16,8 +16,16 @@
 @implementation AppDelegate
 
 
+- (void)setup {
+    ViewController *vc = [ViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [FFServerConfig instance];
+    [self setup];
     return YES;
 }
 
