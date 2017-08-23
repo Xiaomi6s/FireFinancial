@@ -29,18 +29,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *str = nil;
-    NSDictionary *dic = @{@"222": str, @"333": @"333",@"666": @"666"};
-    
     self.title = @"apis";
     [self loadData];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
-    UIImage *img = [UIImage imageNamed:@"11"];
-    NSData *data = UIImagePNGRepresentation(img);
-    DLog(@"%ld",data.length / 1024);
 }
 
 - (void)loadData {

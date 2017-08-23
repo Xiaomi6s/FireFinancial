@@ -13,15 +13,15 @@
 
 +(void)load {
     Method dictionaryWithObjects = class_getClassMethod(self, @selector(dictionaryWithObjects:forKeys:count:));
-    Method avoidCrashDictionaryWithObjects = class_getClassMethod(self, @selector(crashDictionaryWithObjects:forKeys:count:));
-    method_exchangeImplementations(dictionaryWithObjects, avoidCrashDictionaryWithObjects);
+    Method crashDictionaryWithObjects = class_getClassMethod(self, @selector(crashDictionaryWithObjects:forKeys:count:));
+    method_exchangeImplementations(dictionaryWithObjects, crashDictionaryWithObjects);
 }
 
 
 + (instancetype)crashDictionaryWithObjects:(const id  _Nonnull __unsafe_unretained *)objects forKeys:(const id<NSCopying>  _Nonnull __unsafe_unretained *)keys count:(NSUInteger)cnt {
     id instance = nil;
     @try {
-        [self crashDictionaryWithObjects:objects forKeys:keys count:cnt];
+       instance = [self crashDictionaryWithObjects:objects forKeys:keys count:cnt];
     } @catch (NSException *exception) {
         NSUInteger index = 0;
         id  _Nonnull __unsafe_unretained newObjects[cnt];
