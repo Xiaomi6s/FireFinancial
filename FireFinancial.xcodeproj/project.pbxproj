@@ -1,917 +1,919 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 46;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		3CF45430D030F2ADF3D71B2F /* libPods-FireFinancial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */; };
-		59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 59054B101F3416CC00097FB5 /* FFHomeApi.m */; };
-		591F45631F33233A00612927 /* FFCacheManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 591F45611F33233A00612927 /* FFCacheManger.m */; };
-		591F45661F33251F00612927 /* FFBasicApi+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 591F45651F33251F00612927 /* FFBasicApi+Animation.m */; };
-		593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D39FA1F4D250400E4912F /* UIColor+FF.m */; };
-		593D39FE1F4D25DE00E4912F /* UIFont+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D39FD1F4D25DE00E4912F /* UIFont+FF.m */; };
-		593D3A011F4D267800E4912F /* UITableView+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A001F4D267800E4912F /* UITableView+FF.m */; };
-		593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A031F4D268C00E4912F /* UILabel+FF.m */; };
-		593D3A071F4D26A300E4912F /* UITextField+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A061F4D26A300E4912F /* UITextField+FF.m */; };
-		593D3A0A1F4D26B700E4912F /* UIButton+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A091F4D26B700E4912F /* UIButton+FF.m */; };
-		593D3A0E1F4D283F00E4912F /* MBProgressHUD+FFXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A0D1F4D283F00E4912F /* MBProgressHUD+FFXJ.m */; };
-		599057081F32D36E00255F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057071F32D36E00255F25 /* main.m */; };
-		5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990570A1F32D36E00255F25 /* AppDelegate.m */; };
-		5990570E1F32D36E00255F25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990570D1F32D36E00255F25 /* ViewController.m */; };
-		599057111F32D36E00255F25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5990570F1F32D36E00255F25 /* Main.storyboard */; };
-		599057131F32D36E00255F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 599057121F32D36E00255F25 /* Assets.xcassets */; };
-		599057161F32D36E00255F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599057141F32D36E00255F25 /* LaunchScreen.storyboard */; };
-		599057211F32D36E00255F25 /* FireFinancialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057201F32D36E00255F25 /* FireFinancialTests.m */; };
-		5990572C1F32D36E00255F25 /* FireFinancialUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990572B1F32D36E00255F25 /* FireFinancialUITests.m */; };
-		5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057471F32D43C00255F25 /* FFBasicApi.m */; };
-		5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057491F32D43C00255F25 /* FFRequestAgent.m */; };
-		599057501F32D43C00255F25 /* FFResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574B1F32D43C00255F25 /* FFResponseObject.m */; };
-		599057511F32D43D00255F25 /* FFServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574D1F32D43C00255F25 /* FFServerConfig.m */; };
-		599525801F4C054B001A85DE /* FFAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995257A1F4C054B001A85DE /* FFAlert.m */; };
-		599525811F4C054B001A85DE /* FFGenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995257C1F4C054B001A85DE /* FFGenView.m */; };
-		599525821F4C054B001A85DE /* FFGenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5995257D1F4C054B001A85DE /* FFGenView.xib */; };
-		599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995257F1F4C054B001A85DE /* FFScrollSliderView.m */; };
-		59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */; };
-		59BFCB501F4D537A00CB8CB0 /* apis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59BFCB4F1F4D537900CB8CB0 /* apis.plist */; };
-		59BFCB541F4D539500CB8CB0 /* APITestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFCB521F4D539500CB8CB0 /* APITestVC.m */; };
-		59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */; };
-		59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D108C21F41A8DF00065F47 /* FFBasicVC.m */; };
-		59D108C61F41A90500065F47 /* FFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D108C51F41A90500065F47 /* FFNavController.m */; };
-		59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */; };
-		C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB6C1F4D5377004D72E2 /* FFUserApi.m */; };
-		C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */; };
-		C705CB791F4D5D23004D72E2 /* FFUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB781F4D5D23004D72E2 /* FFUserInfo.m */; };
-		C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
-		C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
-		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
-		C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DC1F330440007333B6 /* UIView+FFExtension.m */; };
-		C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */; };
+        3CF45430D030F2ADF3D71B2F /* libPods-FireFinancial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */; };
+        59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 59054B101F3416CC00097FB5 /* FFHomeApi.m */; };
+        591F45631F33233A00612927 /* FFCacheManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 591F45611F33233A00612927 /* FFCacheManger.m */; };
+        591F45661F33251F00612927 /* FFBasicApi+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 591F45651F33251F00612927 /* FFBasicApi+Animation.m */; };
+        593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D39FA1F4D250400E4912F /* UIColor+FF.m */; };
+        593D39FE1F4D25DE00E4912F /* UIFont+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D39FD1F4D25DE00E4912F /* UIFont+FF.m */; };
+        593D3A011F4D267800E4912F /* UITableView+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A001F4D267800E4912F /* UITableView+FF.m */; };
+        593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A031F4D268C00E4912F /* UILabel+FF.m */; };
+        593D3A071F4D26A300E4912F /* UITextField+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A061F4D26A300E4912F /* UITextField+FF.m */; };
+        593D3A0A1F4D26B700E4912F /* UIButton+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A091F4D26B700E4912F /* UIButton+FF.m */; };
+        593D3A0E1F4D283F00E4912F /* MBProgressHUD+FFXJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D3A0D1F4D283F00E4912F /* MBProgressHUD+FFXJ.m */; };
+        599057081F32D36E00255F25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057071F32D36E00255F25 /* main.m */; };
+        5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990570A1F32D36E00255F25 /* AppDelegate.m */; };
+        5990570E1F32D36E00255F25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990570D1F32D36E00255F25 /* ViewController.m */; };
+        599057111F32D36E00255F25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5990570F1F32D36E00255F25 /* Main.storyboard */; };
+        599057131F32D36E00255F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 599057121F32D36E00255F25 /* Assets.xcassets */; };
+        599057161F32D36E00255F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 599057141F32D36E00255F25 /* LaunchScreen.storyboard */; };
+        599057211F32D36E00255F25 /* FireFinancialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057201F32D36E00255F25 /* FireFinancialTests.m */; };
+        5990572C1F32D36E00255F25 /* FireFinancialUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990572B1F32D36E00255F25 /* FireFinancialUITests.m */; };
+        5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057471F32D43C00255F25 /* FFBasicApi.m */; };
+        5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 599057491F32D43C00255F25 /* FFRequestAgent.m */; };
+        599057501F32D43C00255F25 /* FFResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574B1F32D43C00255F25 /* FFResponseObject.m */; };
+        599057511F32D43D00255F25 /* FFServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990574D1F32D43C00255F25 /* FFServerConfig.m */; };
+        599525801F4C054B001A85DE /* FFAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995257A1F4C054B001A85DE /* FFAlert.m */; };
+        599525811F4C054B001A85DE /* FFGenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995257C1F4C054B001A85DE /* FFGenView.m */; };
+        599525821F4C054B001A85DE /* FFGenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5995257D1F4C054B001A85DE /* FFGenView.xib */; };
+        599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995257F1F4C054B001A85DE /* FFScrollSliderView.m */; };
+        59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */; };
+        59BFCB501F4D537A00CB8CB0 /* apis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59BFCB4F1F4D537900CB8CB0 /* apis.plist */; };
+        59BFCB541F4D539500CB8CB0 /* APITestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFCB521F4D539500CB8CB0 /* APITestVC.m */; };
+        59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */; };
+        59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D108C21F41A8DF00065F47 /* FFBasicVC.m */; };
+        59D108C61F41A90500065F47 /* FFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D108C51F41A90500065F47 /* FFNavController.m */; };
+        59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */; };
+        C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB6C1F4D5377004D72E2 /* FFUserApi.m */; };
+        C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */; };
+        C705CB791F4D5D23004D72E2 /* FFUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB781F4D5D23004D72E2 /* FFUserInfo.m */; };
+        C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
+        C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
+        C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
+        C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DC1F330440007333B6 /* UIView+FFExtension.m */; };
+        C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5990571D1F32D36E00255F25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 599056FB1F32D36E00255F25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 599057021F32D36E00255F25;
-			remoteInfo = FireFinancial;
-		};
-		599057281F32D36E00255F25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 599056FB1F32D36E00255F25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 599057021F32D36E00255F25;
-			remoteInfo = FireFinancial;
-		};
+        5990571D1F32D36E00255F25 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 599056FB1F32D36E00255F25 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 599057021F32D36E00255F25;
+            remoteInfo = FireFinancial;
+        };
+        599057281F32D36E00255F25 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 599056FB1F32D36E00255F25 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 599057021F32D36E00255F25;
+            remoteInfo = FireFinancial;
+        };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FireFinancial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.debug.xcconfig"; sourceTree = "<group>"; };
-		59054B0F1F3416CC00097FB5 /* FFHomeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeApi.h; sourceTree = "<group>"; };
-		59054B101F3416CC00097FB5 /* FFHomeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeApi.m; sourceTree = "<group>"; };
-		59054B121F34187300097FB5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		591F45611F33233A00612927 /* FFCacheManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCacheManger.m; sourceTree = "<group>"; };
-		591F45621F33233A00612927 /* FFCacheManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCacheManger.h; sourceTree = "<group>"; };
-		591F45641F33251F00612927 /* FFBasicApi+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFBasicApi+Animation.h"; sourceTree = "<group>"; };
-		591F45651F33251F00612927 /* FFBasicApi+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FFBasicApi+Animation.m"; sourceTree = "<group>"; };
-		593D39F91F4D250400E4912F /* UIColor+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+FF.h"; sourceTree = "<group>"; };
-		593D39FA1F4D250400E4912F /* UIColor+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FF.m"; sourceTree = "<group>"; };
-		593D39FC1F4D25DE00E4912F /* UIFont+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+FF.h"; sourceTree = "<group>"; };
-		593D39FD1F4D25DE00E4912F /* UIFont+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FF.m"; sourceTree = "<group>"; };
-		593D39FF1F4D267800E4912F /* UITableView+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+FF.h"; sourceTree = "<group>"; };
-		593D3A001F4D267800E4912F /* UITableView+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FF.m"; sourceTree = "<group>"; };
-		593D3A021F4D268C00E4912F /* UILabel+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+FF.h"; sourceTree = "<group>"; };
-		593D3A031F4D268C00E4912F /* UILabel+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FF.m"; sourceTree = "<group>"; };
-		593D3A051F4D26A300E4912F /* UITextField+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+FF.h"; sourceTree = "<group>"; };
-		593D3A061F4D26A300E4912F /* UITextField+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+FF.m"; sourceTree = "<group>"; };
-		593D3A081F4D26B700E4912F /* UIButton+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+FF.h"; sourceTree = "<group>"; };
-		593D3A091F4D26B700E4912F /* UIButton+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FF.m"; sourceTree = "<group>"; };
-		593D3A0C1F4D283F00E4912F /* MBProgressHUD+FFXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+FFXJ.h"; sourceTree = "<group>"; };
-		593D3A0D1F4D283F00E4912F /* MBProgressHUD+FFXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+FFXJ.m"; sourceTree = "<group>"; };
-		599057031F32D36E00255F25 /* FireFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		599057071F32D36E00255F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		599057091F32D36E00255F25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5990570A1F32D36E00255F25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5990570C1F32D36E00255F25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5990570D1F32D36E00255F25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		599057101F32D36E00255F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		599057121F32D36E00255F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		599057151F32D36E00255F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		599057171F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5990571C1F32D36E00255F25 /* FireFinancialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireFinancialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		599057201F32D36E00255F25 /* FireFinancialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireFinancialTests.m; sourceTree = "<group>"; };
-		599057221F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		599057271F32D36E00255F25 /* FireFinancialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireFinancialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5990572B1F32D36E00255F25 /* FireFinancialUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireFinancialUITests.m; sourceTree = "<group>"; };
-		5990572D1F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		599057461F32D43C00255F25 /* FFBasicApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBasicApi.h; sourceTree = "<group>"; };
-		599057471F32D43C00255F25 /* FFBasicApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBasicApi.m; sourceTree = "<group>"; };
-		599057481F32D43C00255F25 /* FFRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestAgent.h; sourceTree = "<group>"; };
-		599057491F32D43C00255F25 /* FFRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestAgent.m; sourceTree = "<group>"; };
-		5990574A1F32D43C00255F25 /* FFResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFResponseObject.h; sourceTree = "<group>"; };
-		5990574B1F32D43C00255F25 /* FFResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFResponseObject.m; sourceTree = "<group>"; };
-		5990574C1F32D43C00255F25 /* FFServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFServerConfig.h; sourceTree = "<group>"; };
-		5990574D1F32D43C00255F25 /* FFServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFServerConfig.m; sourceTree = "<group>"; };
-		599525791F4C054B001A85DE /* FFAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlert.h; sourceTree = "<group>"; };
-		5995257A1F4C054B001A85DE /* FFAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAlert.m; sourceTree = "<group>"; };
-		5995257B1F4C054B001A85DE /* FFGenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGenView.h; sourceTree = "<group>"; };
-		5995257C1F4C054B001A85DE /* FFGenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFGenView.m; sourceTree = "<group>"; };
-		5995257D1F4C054B001A85DE /* FFGenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFGenView.xib; sourceTree = "<group>"; };
-		5995257E1F4C054B001A85DE /* FFScrollSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFScrollSliderView.h; sourceTree = "<group>"; };
-		5995257F1F4C054B001A85DE /* FFScrollSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFScrollSliderView.m; sourceTree = "<group>"; };
-		599525841F4C0853001A85DE /* FFDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFDefine.h; sourceTree = "<group>"; };
-		59ABF91E1F32F0900044E2D9 /* FFRequestCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFRequestCache.h; sourceTree = "<group>"; };
-		59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFRequestCache.m; sourceTree = "<group>"; };
-		59ABF9211F32FE1F0044E2D9 /* FFRequestTypedef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFRequestTypedef.h; sourceTree = "<group>"; };
-		59BFCB4F1F4D537900CB8CB0 /* apis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apis.plist; sourceTree = "<group>"; };
-		59BFCB511F4D539500CB8CB0 /* APITestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APITestVC.h; sourceTree = "<group>"; };
-		59BFCB521F4D539500CB8CB0 /* APITestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APITestVC.m; sourceTree = "<group>"; };
-		59BFCB561F4D5CB500CB8CB0 /* FFAboutApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAboutApi.h; sourceTree = "<group>"; };
-		59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAboutApi.m; sourceTree = "<group>"; };
-		59D108C11F41A8DF00065F47 /* FFBasicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFBasicVC.h; sourceTree = "<group>"; };
-		59D108C21F41A8DF00065F47 /* FFBasicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFBasicVC.m; sourceTree = "<group>"; };
-		59D108C41F41A90500065F47 /* FFNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFNavController.h; sourceTree = "<group>"; };
-		59D108C51F41A90500065F47 /* FFNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFNavController.m; sourceTree = "<group>"; };
-		59D38BC21F4C0A2D00EFC08C /* FFImportFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFImportFile.h; sourceTree = "<group>"; };
-		59D38BC31F4C104C00EFC08C /* NSLayoutConstraint+FFExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FFExtension.h"; sourceTree = "<group>"; };
-		59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FFExtension.m"; sourceTree = "<group>"; };
-		C705CB6B1F4D5377004D72E2 /* FFUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserApi.h; sourceTree = "<group>"; };
-		C705CB6C1F4D5377004D72E2 /* FFUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserApi.m; sourceTree = "<group>"; };
-		C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFBasicInfo.h; path = FireFinancial/Apis/FFBasicInfo.h; sourceTree = SOURCE_ROOT; };
-		C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFBasicInfo.m; path = FireFinancial/Apis/FFBasicInfo.m; sourceTree = SOURCE_ROOT; };
-		C705CB771F4D5D23004D72E2 /* FFUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFUserInfo.h; path = FireFinancial/Apis/FFUserInfo.h; sourceTree = SOURCE_ROOT; };
-		C705CB781F4D5D23004D72E2 /* FFUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFUserInfo.m; path = FireFinancial/Apis/FFUserInfo.m; sourceTree = SOURCE_ROOT; };
-		C79031D21F32FAB2007333B6 /* FFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtil.h; sourceTree = "<group>"; };
-		C79031D31F32FAB2007333B6 /* FFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtil.m; sourceTree = "<group>"; };
-		C79031D51F32FB93007333B6 /* NSString+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFExtension.h"; sourceTree = "<group>"; };
-		C79031D61F32FB93007333B6 /* NSString+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFExtension.m"; sourceTree = "<group>"; };
-		C79031D81F32FF26007333B6 /* UIColor+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FFExtension.h"; sourceTree = "<group>"; };
-		C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FFExtension.m"; sourceTree = "<group>"; };
-		C79031DB1F330440007333B6 /* UIView+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FFExtension.h"; sourceTree = "<group>"; };
-		C79031DC1F330440007333B6 /* UIView+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFExtension.m"; sourceTree = "<group>"; };
-		C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFExtension.h"; sourceTree = "<group>"; };
-		C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFExtension.m"; sourceTree = "<group>"; };
-		F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.release.xcconfig"; sourceTree = "<group>"; };
+        08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FireFinancial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+        2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.debug.xcconfig"; sourceTree = "<group>"; };
+        59054B0F1F3416CC00097FB5 /* FFHomeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeApi.h; sourceTree = "<group>"; };
+        59054B101F3416CC00097FB5 /* FFHomeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeApi.m; sourceTree = "<group>"; };
+        59054B121F34187300097FB5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+        591F45611F33233A00612927 /* FFCacheManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCacheManger.m; sourceTree = "<group>"; };
+        591F45621F33233A00612927 /* FFCacheManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCacheManger.h; sourceTree = "<group>"; };
+        591F45641F33251F00612927 /* FFBasicApi+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFBasicApi+Animation.h"; sourceTree = "<group>"; };
+        591F45651F33251F00612927 /* FFBasicApi+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FFBasicApi+Animation.m"; sourceTree = "<group>"; };
+        593D39F91F4D250400E4912F /* UIColor+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+FF.h"; sourceTree = "<group>"; };
+        593D39FA1F4D250400E4912F /* UIColor+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FF.m"; sourceTree = "<group>"; };
+        593D39FC1F4D25DE00E4912F /* UIFont+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+FF.h"; sourceTree = "<group>"; };
+        593D39FD1F4D25DE00E4912F /* UIFont+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FF.m"; sourceTree = "<group>"; };
+        593D39FF1F4D267800E4912F /* UITableView+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+FF.h"; sourceTree = "<group>"; };
+        593D3A001F4D267800E4912F /* UITableView+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FF.m"; sourceTree = "<group>"; };
+        593D3A021F4D268C00E4912F /* UILabel+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+FF.h"; sourceTree = "<group>"; };
+        593D3A031F4D268C00E4912F /* UILabel+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FF.m"; sourceTree = "<group>"; };
+        593D3A051F4D26A300E4912F /* UITextField+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+FF.h"; sourceTree = "<group>"; };
+        593D3A061F4D26A300E4912F /* UITextField+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+FF.m"; sourceTree = "<group>"; };
+        593D3A081F4D26B700E4912F /* UIButton+FF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+FF.h"; sourceTree = "<group>"; };
+        593D3A091F4D26B700E4912F /* UIButton+FF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FF.m"; sourceTree = "<group>"; };
+        593D3A0C1F4D283F00E4912F /* MBProgressHUD+FFXJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+FFXJ.h"; sourceTree = "<group>"; };
+        593D3A0D1F4D283F00E4912F /* MBProgressHUD+FFXJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+FFXJ.m"; sourceTree = "<group>"; };
+        599057031F32D36E00255F25 /* FireFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        599057071F32D36E00255F25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+        599057091F32D36E00255F25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+        5990570A1F32D36E00255F25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+        5990570C1F32D36E00255F25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+        5990570D1F32D36E00255F25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+        599057101F32D36E00255F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+        599057121F32D36E00255F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        599057151F32D36E00255F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+        599057171F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        5990571C1F32D36E00255F25 /* FireFinancialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireFinancialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+        599057201F32D36E00255F25 /* FireFinancialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireFinancialTests.m; sourceTree = "<group>"; };
+        599057221F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        599057271F32D36E00255F25 /* FireFinancialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireFinancialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+        5990572B1F32D36E00255F25 /* FireFinancialUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireFinancialUITests.m; sourceTree = "<group>"; };
+        5990572D1F32D36E00255F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        599057461F32D43C00255F25 /* FFBasicApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBasicApi.h; sourceTree = "<group>"; };
+        599057471F32D43C00255F25 /* FFBasicApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBasicApi.m; sourceTree = "<group>"; };
+        599057481F32D43C00255F25 /* FFRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRequestAgent.h; sourceTree = "<group>"; };
+        599057491F32D43C00255F25 /* FFRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRequestAgent.m; sourceTree = "<group>"; };
+        5990574A1F32D43C00255F25 /* FFResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFResponseObject.h; sourceTree = "<group>"; };
+        5990574B1F32D43C00255F25 /* FFResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFResponseObject.m; sourceTree = "<group>"; };
+        5990574C1F32D43C00255F25 /* FFServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFServerConfig.h; sourceTree = "<group>"; };
+        5990574D1F32D43C00255F25 /* FFServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFServerConfig.m; sourceTree = "<group>"; };
+        599525791F4C054B001A85DE /* FFAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlert.h; sourceTree = "<group>"; };
+        5995257A1F4C054B001A85DE /* FFAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAlert.m; sourceTree = "<group>"; };
+        5995257B1F4C054B001A85DE /* FFGenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGenView.h; sourceTree = "<group>"; };
+        5995257C1F4C054B001A85DE /* FFGenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFGenView.m; sourceTree = "<group>"; };
+        5995257D1F4C054B001A85DE /* FFGenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFGenView.xib; sourceTree = "<group>"; };
+        5995257E1F4C054B001A85DE /* FFScrollSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFScrollSliderView.h; sourceTree = "<group>"; };
+        5995257F1F4C054B001A85DE /* FFScrollSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFScrollSliderView.m; sourceTree = "<group>"; };
+        599525841F4C0853001A85DE /* FFDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFDefine.h; sourceTree = "<group>"; };
+        59ABF91E1F32F0900044E2D9 /* FFRequestCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFRequestCache.h; sourceTree = "<group>"; };
+        59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFRequestCache.m; sourceTree = "<group>"; };
+        59ABF9211F32FE1F0044E2D9 /* FFRequestTypedef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFRequestTypedef.h; sourceTree = "<group>"; };
+        59BFCB4F1F4D537900CB8CB0 /* apis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apis.plist; sourceTree = "<group>"; };
+        59BFCB511F4D539500CB8CB0 /* APITestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APITestVC.h; sourceTree = "<group>"; };
+        59BFCB521F4D539500CB8CB0 /* APITestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APITestVC.m; sourceTree = "<group>"; };
+        59BFCB561F4D5CB500CB8CB0 /* FFAboutApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAboutApi.h; sourceTree = "<group>"; };
+        59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAboutApi.m; sourceTree = "<group>"; };
+        59D108C11F41A8DF00065F47 /* FFBasicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFBasicVC.h; sourceTree = "<group>"; };
+        59D108C21F41A8DF00065F47 /* FFBasicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFBasicVC.m; sourceTree = "<group>"; };
+        59D108C41F41A90500065F47 /* FFNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFNavController.h; sourceTree = "<group>"; };
+        59D108C51F41A90500065F47 /* FFNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFNavController.m; sourceTree = "<group>"; };
+        59D38BC21F4C0A2D00EFC08C /* FFImportFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFImportFile.h; sourceTree = "<group>"; };
+        59D38BC31F4C104C00EFC08C /* NSLayoutConstraint+FFExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FFExtension.h"; sourceTree = "<group>"; };
+        59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FFExtension.m"; sourceTree = "<group>"; };
+        C705CB6B1F4D5377004D72E2 /* FFUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserApi.h; sourceTree = "<group>"; };
+        C705CB6C1F4D5377004D72E2 /* FFUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserApi.m; sourceTree = "<group>"; };
+        C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFBasicInfo.h; path = FireFinancial/Apis/FFBasicInfo.h; sourceTree = SOURCE_ROOT; };
+        C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFBasicInfo.m; path = FireFinancial/Apis/FFBasicInfo.m; sourceTree = SOURCE_ROOT; };
+        C705CB771F4D5D23004D72E2 /* FFUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFUserInfo.h; path = FireFinancial/Apis/FFUserInfo.h; sourceTree = SOURCE_ROOT; };
+        C705CB781F4D5D23004D72E2 /* FFUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFUserInfo.m; path = FireFinancial/Apis/FFUserInfo.m; sourceTree = SOURCE_ROOT; };
+        C79031D21F32FAB2007333B6 /* FFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtil.h; sourceTree = "<group>"; };
+        C79031D31F32FAB2007333B6 /* FFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtil.m; sourceTree = "<group>"; };
+        C79031D51F32FB93007333B6 /* NSString+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFExtension.h"; sourceTree = "<group>"; };
+        C79031D61F32FB93007333B6 /* NSString+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFExtension.m"; sourceTree = "<group>"; };
+        C79031D81F32FF26007333B6 /* UIColor+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FFExtension.h"; sourceTree = "<group>"; };
+        C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FFExtension.m"; sourceTree = "<group>"; };
+        C79031DB1F330440007333B6 /* UIView+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FFExtension.h"; sourceTree = "<group>"; };
+        C79031DC1F330440007333B6 /* UIView+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFExtension.m"; sourceTree = "<group>"; };
+        C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFExtension.h"; sourceTree = "<group>"; };
+        C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFExtension.m"; sourceTree = "<group>"; };
+        F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		599057001F32D36E00255F25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CF45430D030F2ADF3D71B2F /* libPods-FireFinancial.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		599057191F32D36E00255F25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		599057241F32D36E00255F25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        599057001F32D36E00255F25 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                3CF45430D030F2ADF3D71B2F /* libPods-FireFinancial.a in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        599057191F32D36E00255F25 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        599057241F32D36E00255F25 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		59054B0E1F3416B100097FB5 /* Apis */ = {
-			isa = PBXGroup;
-			children = (
-				593D3A0F1F4D2E1F00E4912F /* Models */,
-				59054B0F1F3416CC00097FB5 /* FFHomeApi.h */,
-				59054B101F3416CC00097FB5 /* FFHomeApi.m */,
-				59BFCB561F4D5CB500CB8CB0 /* FFAboutApi.h */,
-				59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */,
-				59BFCB4F1F4D537900CB8CB0 /* apis.plist */,
-			);
-			path = Apis;
-			sourceTree = "<group>";
-		};
-		593D3A0B1F4D283F00E4912F /* ThridExtension */ = {
-			isa = PBXGroup;
-			children = (
-				593D3A0C1F4D283F00E4912F /* MBProgressHUD+FFXJ.h */,
-				593D3A0D1F4D283F00E4912F /* MBProgressHUD+FFXJ.m */,
-			);
-			name = ThridExtension;
-			path = FireFinancial/ThridExtension;
-			sourceTree = SOURCE_ROOT;
-		};
-		593D3A0F1F4D2E1F00E4912F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */,
-				C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */,
-				C705CB771F4D5D23004D72E2 /* FFUserInfo.h */,
-				C705CB781F4D5D23004D72E2 /* FFUserInfo.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		598C3F831F4BD895000ED8F1 /* CustomCommonUI */ = {
-			isa = PBXGroup;
-			children = (
-				599525781F4C054B001A85DE /* CustomViews */,
-				593D39FC1F4D25DE00E4912F /* UIFont+FF.h */,
-				593D39FD1F4D25DE00E4912F /* UIFont+FF.m */,
-				593D39F91F4D250400E4912F /* UIColor+FF.h */,
-				593D39FA1F4D250400E4912F /* UIColor+FF.m */,
-				593D39FF1F4D267800E4912F /* UITableView+FF.h */,
-				593D3A001F4D267800E4912F /* UITableView+FF.m */,
-				593D3A021F4D268C00E4912F /* UILabel+FF.h */,
-				593D3A031F4D268C00E4912F /* UILabel+FF.m */,
-				593D3A051F4D26A300E4912F /* UITextField+FF.h */,
-				593D3A061F4D26A300E4912F /* UITextField+FF.m */,
-				593D3A081F4D26B700E4912F /* UIButton+FF.h */,
-				593D3A091F4D26B700E4912F /* UIButton+FF.m */,
-			);
-			path = CustomCommonUI;
-			sourceTree = "<group>";
-		};
-		599056FA1F32D36E00255F25 = {
-			isa = PBXGroup;
-			children = (
-				599057051F32D36E00255F25 /* FireFinancial */,
-				5990571F1F32D36E00255F25 /* FireFinancialTests */,
-				5990572A1F32D36E00255F25 /* FireFinancialUITests */,
-				599057041F32D36E00255F25 /* Products */,
-				67B8D45E7BD1A54B2B0153A9 /* Pods */,
-				B9A2F837C90F62E94AA4A8E6 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		599057041F32D36E00255F25 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				599057031F32D36E00255F25 /* FireFinancial.app */,
-				5990571C1F32D36E00255F25 /* FireFinancialTests.xctest */,
-				599057271F32D36E00255F25 /* FireFinancialUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		599057051F32D36E00255F25 /* FireFinancial */ = {
-			isa = PBXGroup;
-			children = (
-				59D108BD1F41A80800065F47 /* CustomClass */,
-				59054B0E1F3416B100097FB5 /* Apis */,
-				593D3A0B1F4D283F00E4912F /* ThridExtension */,
-				C79031CF1F32FA40007333B6 /* Tools */,
-				599057391F32D3C200255F25 /* FFNetWorking */,
-				599057091F32D36E00255F25 /* AppDelegate.h */,
-				5990570A1F32D36E00255F25 /* AppDelegate.m */,
-				5990570C1F32D36E00255F25 /* ViewController.h */,
-				5990570D1F32D36E00255F25 /* ViewController.m */,
-				59BFCB511F4D539500CB8CB0 /* APITestVC.h */,
-				59BFCB521F4D539500CB8CB0 /* APITestVC.m */,
-				5990570F1F32D36E00255F25 /* Main.storyboard */,
-				599057121F32D36E00255F25 /* Assets.xcassets */,
-				599057141F32D36E00255F25 /* LaunchScreen.storyboard */,
-				599057171F32D36E00255F25 /* Info.plist */,
-				599057061F32D36E00255F25 /* Supporting Files */,
-			);
-			path = FireFinancial;
-			sourceTree = "<group>";
-		};
-		599057061F32D36E00255F25 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				599057071F32D36E00255F25 /* main.m */,
-				59054B121F34187300097FB5 /* PrefixHeader.pch */,
-				599525841F4C0853001A85DE /* FFDefine.h */,
-				59D38BC21F4C0A2D00EFC08C /* FFImportFile.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5990571F1F32D36E00255F25 /* FireFinancialTests */ = {
-			isa = PBXGroup;
-			children = (
-				599057201F32D36E00255F25 /* FireFinancialTests.m */,
-				599057221F32D36E00255F25 /* Info.plist */,
-			);
-			path = FireFinancialTests;
-			sourceTree = "<group>";
-		};
-		5990572A1F32D36E00255F25 /* FireFinancialUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5990572B1F32D36E00255F25 /* FireFinancialUITests.m */,
-				5990572D1F32D36E00255F25 /* Info.plist */,
-			);
-			path = FireFinancialUITests;
-			sourceTree = "<group>";
-		};
-		599057391F32D3C200255F25 /* FFNetWorking */ = {
-			isa = PBXGroup;
-			children = (
-				5990574C1F32D43C00255F25 /* FFServerConfig.h */,
-				5990574D1F32D43C00255F25 /* FFServerConfig.m */,
-				59ABF9211F32FE1F0044E2D9 /* FFRequestTypedef.h */,
-				599057461F32D43C00255F25 /* FFBasicApi.h */,
-				599057471F32D43C00255F25 /* FFBasicApi.m */,
-				59ABF91E1F32F0900044E2D9 /* FFRequestCache.h */,
-				59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */,
-				599057481F32D43C00255F25 /* FFRequestAgent.h */,
-				599057491F32D43C00255F25 /* FFRequestAgent.m */,
-				5990574A1F32D43C00255F25 /* FFResponseObject.h */,
-				5990574B1F32D43C00255F25 /* FFResponseObject.m */,
-				591F45641F33251F00612927 /* FFBasicApi+Animation.h */,
-				591F45651F33251F00612927 /* FFBasicApi+Animation.m */,
-			);
-			path = FFNetWorking;
-			sourceTree = "<group>";
-		};
-		599525781F4C054B001A85DE /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				599525791F4C054B001A85DE /* FFAlert.h */,
-				5995257A1F4C054B001A85DE /* FFAlert.m */,
-				5995257B1F4C054B001A85DE /* FFGenView.h */,
-				5995257C1F4C054B001A85DE /* FFGenView.m */,
-				5995257D1F4C054B001A85DE /* FFGenView.xib */,
-				5995257E1F4C054B001A85DE /* FFScrollSliderView.h */,
-				5995257F1F4C054B001A85DE /* FFScrollSliderView.m */,
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		59D108BD1F41A80800065F47 /* CustomClass */ = {
-			isa = PBXGroup;
-			children = (
-				598C3F831F4BD895000ED8F1 /* CustomCommonUI */,
-				59D108BE1F41A8B800065F47 /* CustomControllers */,
-			);
-			path = CustomClass;
-			sourceTree = "<group>";
-		};
-		59D108BE1F41A8B800065F47 /* CustomControllers */ = {
-			isa = PBXGroup;
-			children = (
-				59D108C11F41A8DF00065F47 /* FFBasicVC.h */,
-				59D108C21F41A8DF00065F47 /* FFBasicVC.m */,
-				59D108C41F41A90500065F47 /* FFNavController.h */,
-				59D108C51F41A90500065F47 /* FFNavController.m */,
-			);
-			path = CustomControllers;
-			sourceTree = "<group>";
-		};
-		67B8D45E7BD1A54B2B0153A9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */,
-				F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B9A2F837C90F62E94AA4A8E6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C79031CF1F32FA40007333B6 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				C79031D11F32FA9C007333B6 /* Tool */,
-				C79031D01F32FA8B007333B6 /* Category */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		C79031D01F32FA8B007333B6 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				C79031D51F32FB93007333B6 /* NSString+FFExtension.h */,
-				C79031D61F32FB93007333B6 /* NSString+FFExtension.m */,
-				C79031D81F32FF26007333B6 /* UIColor+FFExtension.h */,
-				C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */,
-				C79031DB1F330440007333B6 /* UIView+FFExtension.h */,
-				C79031DC1F330440007333B6 /* UIView+FFExtension.m */,
-				C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */,
-				C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */,
-				59D38BC31F4C104C00EFC08C /* NSLayoutConstraint+FFExtension.h */,
-				59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		C79031D11F32FA9C007333B6 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				C79031D21F32FAB2007333B6 /* FFUtil.h */,
-				C79031D31F32FAB2007333B6 /* FFUtil.m */,
-				591F45621F33233A00612927 /* FFCacheManger.h */,
-				591F45611F33233A00612927 /* FFCacheManger.m */,
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
+        59054B0E1F3416B100097FB5 /* Apis */ = {
+            isa = PBXGroup;
+            children = (
+                593D3A0F1F4D2E1F00E4912F /* Models */,
+                C705CB6B1F4D5377004D72E2 /* FFUserApi.h */,
+                C705CB6C1F4D5377004D72E2 /* FFUserApi.m */,
+                59054B0F1F3416CC00097FB5 /* FFHomeApi.h */,
+                59054B101F3416CC00097FB5 /* FFHomeApi.m */,
+                59BFCB561F4D5CB500CB8CB0 /* FFAboutApi.h */,
+                59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */,
+                59BFCB4F1F4D537900CB8CB0 /* apis.plist */,
+            );
+            path = Apis;
+            sourceTree = "<group>";
+        };
+        593D3A0B1F4D283F00E4912F /* ThridExtension */ = {
+            isa = PBXGroup;
+            children = (
+                593D3A0C1F4D283F00E4912F /* MBProgressHUD+FFXJ.h */,
+                593D3A0D1F4D283F00E4912F /* MBProgressHUD+FFXJ.m */,
+            );
+            name = ThridExtension;
+            path = FireFinancial/ThridExtension;
+            sourceTree = SOURCE_ROOT;
+        };
+        593D3A0F1F4D2E1F00E4912F /* Models */ = {
+            isa = PBXGroup;
+            children = (
+                C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */,
+                C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */,
+                C705CB771F4D5D23004D72E2 /* FFUserInfo.h */,
+                C705CB781F4D5D23004D72E2 /* FFUserInfo.m */,
+            );
+            path = Models;
+            sourceTree = "<group>";
+        };
+        598C3F831F4BD895000ED8F1 /* CustomCommonUI */ = {
+            isa = PBXGroup;
+            children = (
+                599525781F4C054B001A85DE /* CustomViews */,
+                593D39FC1F4D25DE00E4912F /* UIFont+FF.h */,
+                593D39FD1F4D25DE00E4912F /* UIFont+FF.m */,
+                593D39F91F4D250400E4912F /* UIColor+FF.h */,
+                593D39FA1F4D250400E4912F /* UIColor+FF.m */,
+                593D39FF1F4D267800E4912F /* UITableView+FF.h */,
+                593D3A001F4D267800E4912F /* UITableView+FF.m */,
+                593D3A021F4D268C00E4912F /* UILabel+FF.h */,
+                593D3A031F4D268C00E4912F /* UILabel+FF.m */,
+                593D3A051F4D26A300E4912F /* UITextField+FF.h */,
+                593D3A061F4D26A300E4912F /* UITextField+FF.m */,
+                593D3A081F4D26B700E4912F /* UIButton+FF.h */,
+                593D3A091F4D26B700E4912F /* UIButton+FF.m */,
+            );
+            path = CustomCommonUI;
+            sourceTree = "<group>";
+        };
+        599056FA1F32D36E00255F25 = {
+            isa = PBXGroup;
+            children = (
+                599057051F32D36E00255F25 /* FireFinancial */,
+                5990571F1F32D36E00255F25 /* FireFinancialTests */,
+                5990572A1F32D36E00255F25 /* FireFinancialUITests */,
+                599057041F32D36E00255F25 /* Products */,
+                67B8D45E7BD1A54B2B0153A9 /* Pods */,
+                B9A2F837C90F62E94AA4A8E6 /* Frameworks */,
+            );
+            sourceTree = "<group>";
+        };
+        599057041F32D36E00255F25 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                599057031F32D36E00255F25 /* FireFinancial.app */,
+                5990571C1F32D36E00255F25 /* FireFinancialTests.xctest */,
+                599057271F32D36E00255F25 /* FireFinancialUITests.xctest */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        599057051F32D36E00255F25 /* FireFinancial */ = {
+            isa = PBXGroup;
+            children = (
+                59D108BD1F41A80800065F47 /* CustomClass */,
+                59054B0E1F3416B100097FB5 /* Apis */,
+                593D3A0B1F4D283F00E4912F /* ThridExtension */,
+                C79031CF1F32FA40007333B6 /* Tools */,
+                599057391F32D3C200255F25 /* FFNetWorking */,
+                599057091F32D36E00255F25 /* AppDelegate.h */,
+                5990570A1F32D36E00255F25 /* AppDelegate.m */,
+                5990570C1F32D36E00255F25 /* ViewController.h */,
+                5990570D1F32D36E00255F25 /* ViewController.m */,
+                59BFCB511F4D539500CB8CB0 /* APITestVC.h */,
+                59BFCB521F4D539500CB8CB0 /* APITestVC.m */,
+                5990570F1F32D36E00255F25 /* Main.storyboard */,
+                599057121F32D36E00255F25 /* Assets.xcassets */,
+                599057141F32D36E00255F25 /* LaunchScreen.storyboard */,
+                599057171F32D36E00255F25 /* Info.plist */,
+                599057061F32D36E00255F25 /* Supporting Files */,
+            );
+            path = FireFinancial;
+            sourceTree = "<group>";
+        };
+        599057061F32D36E00255F25 /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                599057071F32D36E00255F25 /* main.m */,
+                59054B121F34187300097FB5 /* PrefixHeader.pch */,
+                599525841F4C0853001A85DE /* FFDefine.h */,
+                59D38BC21F4C0A2D00EFC08C /* FFImportFile.h */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
+        5990571F1F32D36E00255F25 /* FireFinancialTests */ = {
+            isa = PBXGroup;
+            children = (
+                599057201F32D36E00255F25 /* FireFinancialTests.m */,
+                599057221F32D36E00255F25 /* Info.plist */,
+            );
+            path = FireFinancialTests;
+            sourceTree = "<group>";
+        };
+        5990572A1F32D36E00255F25 /* FireFinancialUITests */ = {
+            isa = PBXGroup;
+            children = (
+                5990572B1F32D36E00255F25 /* FireFinancialUITests.m */,
+                5990572D1F32D36E00255F25 /* Info.plist */,
+            );
+            path = FireFinancialUITests;
+            sourceTree = "<group>";
+        };
+        599057391F32D3C200255F25 /* FFNetWorking */ = {
+            isa = PBXGroup;
+            children = (
+                5990574C1F32D43C00255F25 /* FFServerConfig.h */,
+                5990574D1F32D43C00255F25 /* FFServerConfig.m */,
+                59ABF9211F32FE1F0044E2D9 /* FFRequestTypedef.h */,
+                599057461F32D43C00255F25 /* FFBasicApi.h */,
+                599057471F32D43C00255F25 /* FFBasicApi.m */,
+                59ABF91E1F32F0900044E2D9 /* FFRequestCache.h */,
+                59ABF91F1F32F0900044E2D9 /* FFRequestCache.m */,
+                599057481F32D43C00255F25 /* FFRequestAgent.h */,
+                599057491F32D43C00255F25 /* FFRequestAgent.m */,
+                5990574A1F32D43C00255F25 /* FFResponseObject.h */,
+                5990574B1F32D43C00255F25 /* FFResponseObject.m */,
+                591F45641F33251F00612927 /* FFBasicApi+Animation.h */,
+                591F45651F33251F00612927 /* FFBasicApi+Animation.m */,
+            );
+            path = FFNetWorking;
+            sourceTree = "<group>";
+        };
+        599525781F4C054B001A85DE /* CustomViews */ = {
+            isa = PBXGroup;
+            children = (
+                599525791F4C054B001A85DE /* FFAlert.h */,
+                5995257A1F4C054B001A85DE /* FFAlert.m */,
+                5995257B1F4C054B001A85DE /* FFGenView.h */,
+                5995257C1F4C054B001A85DE /* FFGenView.m */,
+                5995257D1F4C054B001A85DE /* FFGenView.xib */,
+                5995257E1F4C054B001A85DE /* FFScrollSliderView.h */,
+                5995257F1F4C054B001A85DE /* FFScrollSliderView.m */,
+            );
+            path = CustomViews;
+            sourceTree = "<group>";
+        };
+        59D108BD1F41A80800065F47 /* CustomClass */ = {
+            isa = PBXGroup;
+            children = (
+                598C3F831F4BD895000ED8F1 /* CustomCommonUI */,
+                59D108BE1F41A8B800065F47 /* CustomControllers */,
+            );
+            path = CustomClass;
+            sourceTree = "<group>";
+        };
+        59D108BE1F41A8B800065F47 /* CustomControllers */ = {
+            isa = PBXGroup;
+            children = (
+                59D108C11F41A8DF00065F47 /* FFBasicVC.h */,
+                59D108C21F41A8DF00065F47 /* FFBasicVC.m */,
+                59D108C41F41A90500065F47 /* FFNavController.h */,
+                59D108C51F41A90500065F47 /* FFNavController.m */,
+            );
+            path = CustomControllers;
+            sourceTree = "<group>";
+        };
+        67B8D45E7BD1A54B2B0153A9 /* Pods */ = {
+            isa = PBXGroup;
+            children = (
+                2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */,
+                F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */,
+            );
+            name = Pods;
+            sourceTree = "<group>";
+        };
+        B9A2F837C90F62E94AA4A8E6 /* Frameworks */ = {
+            isa = PBXGroup;
+            children = (
+                08A00413E2A1DF2AE20A2B50 /* libPods-FireFinancial.a */,
+            );
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
+        C79031CF1F32FA40007333B6 /* Tools */ = {
+            isa = PBXGroup;
+            children = (
+                C79031D11F32FA9C007333B6 /* Tool */,
+                C79031D01F32FA8B007333B6 /* Category */,
+            );
+            path = Tools;
+            sourceTree = "<group>";
+        };
+        C79031D01F32FA8B007333B6 /* Category */ = {
+            isa = PBXGroup;
+            children = (
+                C79031D51F32FB93007333B6 /* NSString+FFExtension.h */,
+                C79031D61F32FB93007333B6 /* NSString+FFExtension.m */,
+                C79031D81F32FF26007333B6 /* UIColor+FFExtension.h */,
+                C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */,
+                C79031DB1F330440007333B6 /* UIView+FFExtension.h */,
+                C79031DC1F330440007333B6 /* UIView+FFExtension.m */,
+                C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */,
+                C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */,
+                59D38BC31F4C104C00EFC08C /* NSLayoutConstraint+FFExtension.h */,
+                59D38BC41F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m */,
+            );
+            path = Category;
+            sourceTree = "<group>";
+        };
+        C79031D11F32FA9C007333B6 /* Tool */ = {
+            isa = PBXGroup;
+            children = (
+                C79031D21F32FAB2007333B6 /* FFUtil.h */,
+                C79031D31F32FAB2007333B6 /* FFUtil.m */,
+                591F45621F33233A00612927 /* FFCacheManger.h */,
+                591F45611F33233A00612927 /* FFCacheManger.m */,
+            );
+            path = Tool;
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		599057021F32D36E00255F25 /* FireFinancial */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 599057301F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancial" */;
-			buildPhases = (
-				E1DDFDF4A6BBACC70FAD4B59 /* [CP] Check Pods Manifest.lock */,
-				599056FF1F32D36E00255F25 /* Sources */,
-				599057001F32D36E00255F25 /* Frameworks */,
-				599057011F32D36E00255F25 /* Resources */,
-				D99E46646E2600F77F2C729E /* [CP] Embed Pods Frameworks */,
-				8B6EE6DC67785DB4E6120C25 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FireFinancial;
-			productName = FireFinancial;
-			productReference = 599057031F32D36E00255F25 /* FireFinancial.app */;
-			productType = "com.apple.product-type.application";
-		};
-		5990571B1F32D36E00255F25 /* FireFinancialTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 599057331F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialTests" */;
-			buildPhases = (
-				599057181F32D36E00255F25 /* Sources */,
-				599057191F32D36E00255F25 /* Frameworks */,
-				5990571A1F32D36E00255F25 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5990571E1F32D36E00255F25 /* PBXTargetDependency */,
-			);
-			name = FireFinancialTests;
-			productName = FireFinancialTests;
-			productReference = 5990571C1F32D36E00255F25 /* FireFinancialTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		599057261F32D36E00255F25 /* FireFinancialUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 599057361F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialUITests" */;
-			buildPhases = (
-				599057231F32D36E00255F25 /* Sources */,
-				599057241F32D36E00255F25 /* Frameworks */,
-				599057251F32D36E00255F25 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				599057291F32D36E00255F25 /* PBXTargetDependency */,
-			);
-			name = FireFinancialUITests;
-			productName = FireFinancialUITests;
-			productReference = 599057271F32D36E00255F25 /* FireFinancialUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
+        599057021F32D36E00255F25 /* FireFinancial */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 599057301F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancial" */;
+            buildPhases = (
+                E1DDFDF4A6BBACC70FAD4B59 /* [CP] Check Pods Manifest.lock */,
+                599056FF1F32D36E00255F25 /* Sources */,
+                599057001F32D36E00255F25 /* Frameworks */,
+                599057011F32D36E00255F25 /* Resources */,
+                D99E46646E2600F77F2C729E /* [CP] Embed Pods Frameworks */,
+                8B6EE6DC67785DB4E6120C25 /* [CP] Copy Pods Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = FireFinancial;
+            productName = FireFinancial;
+            productReference = 599057031F32D36E00255F25 /* FireFinancial.app */;
+            productType = "com.apple.product-type.application";
+        };
+        5990571B1F32D36E00255F25 /* FireFinancialTests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 599057331F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialTests" */;
+            buildPhases = (
+                599057181F32D36E00255F25 /* Sources */,
+                599057191F32D36E00255F25 /* Frameworks */,
+                5990571A1F32D36E00255F25 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                5990571E1F32D36E00255F25 /* PBXTargetDependency */,
+            );
+            name = FireFinancialTests;
+            productName = FireFinancialTests;
+            productReference = 5990571C1F32D36E00255F25 /* FireFinancialTests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
+        599057261F32D36E00255F25 /* FireFinancialUITests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 599057361F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialUITests" */;
+            buildPhases = (
+                599057231F32D36E00255F25 /* Sources */,
+                599057241F32D36E00255F25 /* Frameworks */,
+                599057251F32D36E00255F25 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                599057291F32D36E00255F25 /* PBXTargetDependency */,
+            );
+            name = FireFinancialUITests;
+            productName = FireFinancialUITests;
+            productReference = 599057271F32D36E00255F25 /* FireFinancialUITests.xctest */;
+            productType = "com.apple.product-type.bundle.ui-testing";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		599056FB1F32D36E00255F25 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = rxj;
-				TargetAttributes = {
-					599057021F32D36E00255F25 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DRJ42M455V;
-						ProvisioningStyle = Automatic;
-					};
-					5990571B1F32D36E00255F25 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DRJ42M455V;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 599057021F32D36E00255F25;
-					};
-					599057261F32D36E00255F25 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DRJ42M455V;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 599057021F32D36E00255F25;
-					};
-				};
-			};
-			buildConfigurationList = 599056FE1F32D36E00255F25 /* Build configuration list for PBXProject "FireFinancial" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 599056FA1F32D36E00255F25;
-			productRefGroup = 599057041F32D36E00255F25 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				599057021F32D36E00255F25 /* FireFinancial */,
-				5990571B1F32D36E00255F25 /* FireFinancialTests */,
-				599057261F32D36E00255F25 /* FireFinancialUITests */,
-			);
-		};
+        599056FB1F32D36E00255F25 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastUpgradeCheck = 0830;
+                ORGANIZATIONNAME = rxj;
+                TargetAttributes = {
+                    599057021F32D36E00255F25 = {
+                        CreatedOnToolsVersion = 8.3.3;
+                        DevelopmentTeam = DRJ42M455V;
+                        ProvisioningStyle = Automatic;
+                    };
+                    5990571B1F32D36E00255F25 = {
+                        CreatedOnToolsVersion = 8.3.3;
+                        DevelopmentTeam = DRJ42M455V;
+                        ProvisioningStyle = Automatic;
+                        TestTargetID = 599057021F32D36E00255F25;
+                    };
+                    599057261F32D36E00255F25 = {
+                        CreatedOnToolsVersion = 8.3.3;
+                        DevelopmentTeam = DRJ42M455V;
+                        ProvisioningStyle = Automatic;
+                        TestTargetID = 599057021F32D36E00255F25;
+                    };
+                };
+            };
+            buildConfigurationList = 599056FE1F32D36E00255F25 /* Build configuration list for PBXProject "FireFinancial" */;
+            compatibilityVersion = "Xcode 3.2";
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = 599056FA1F32D36E00255F25;
+            productRefGroup = 599057041F32D36E00255F25 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                599057021F32D36E00255F25 /* FireFinancial */,
+                5990571B1F32D36E00255F25 /* FireFinancialTests */,
+                599057261F32D36E00255F25 /* FireFinancialUITests */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		599057011F32D36E00255F25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				599525821F4C054B001A85DE /* FFGenView.xib in Resources */,
-				599057161F32D36E00255F25 /* LaunchScreen.storyboard in Resources */,
-				599057131F32D36E00255F25 /* Assets.xcassets in Resources */,
-				599057111F32D36E00255F25 /* Main.storyboard in Resources */,
-				59BFCB501F4D537A00CB8CB0 /* apis.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5990571A1F32D36E00255F25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		599057251F32D36E00255F25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        599057011F32D36E00255F25 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                599525821F4C054B001A85DE /* FFGenView.xib in Resources */,
+                599057161F32D36E00255F25 /* LaunchScreen.storyboard in Resources */,
+                599057131F32D36E00255F25 /* Assets.xcassets in Resources */,
+                599057111F32D36E00255F25 /* Main.storyboard in Resources */,
+                59BFCB501F4D537A00CB8CB0 /* apis.plist in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        5990571A1F32D36E00255F25 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        599057251F32D36E00255F25 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8B6EE6DC67785DB4E6120C25 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D99E46646E2600F77F2C729E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1DDFDF4A6BBACC70FAD4B59 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FireFinancial-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
+        8B6EE6DC67785DB4E6120C25 /* [CP] Copy Pods Resources */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "[CP] Copy Pods Resources";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial-resources.sh\"\n";
+            showEnvVarsInLog = 0;
+        };
+        D99E46646E2600F77F2C729E /* [CP] Embed Pods Frameworks */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "[CP] Embed Pods Frameworks";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial-frameworks.sh\"\n";
+            showEnvVarsInLog = 0;
+        };
+        E1DDFDF4A6BBACC70FAD4B59 /* [CP] Check Pods Manifest.lock */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+                "${PODS_ROOT}/Manifest.lock",
+            );
+            name = "[CP] Check Pods Manifest.lock";
+            outputPaths = (
+                "$(DERIVED_FILE_DIR)/Pods-FireFinancial-checkManifestLockResult.txt",
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+            showEnvVarsInLog = 0;
+        };
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		599056FF1F32D36E00255F25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */,
-				C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */,
-				591F45631F33233A00612927 /* FFCacheManger.m in Sources */,
-				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
-				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
-				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
-				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
-				593D3A011F4D267800E4912F /* UITableView+FF.m in Sources */,
-				59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */,
-				593D3A071F4D26A300E4912F /* UITextField+FF.m in Sources */,
-				593D3A0A1F4D26B700E4912F /* UIButton+FF.m in Sources */,
-				599525801F4C054B001A85DE /* FFAlert.m in Sources */,
-				591F45661F33251F00612927 /* FFBasicApi+Animation.m in Sources */,
-				5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
-				599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
-				593D3A0E1F4D283F00E4912F /* MBProgressHUD+FFXJ.m in Sources */,
-				C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */,
-				5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */,
-				C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */,
-				C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */,
-				59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */,
-				593D39FE1F4D25DE00E4912F /* UIFont+FF.m in Sources */,
-				599057081F32D36E00255F25 /* main.m in Sources */,
-				5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */,
-				599057501F32D43C00255F25 /* FFResponseObject.m in Sources */,
-				593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */,
-				599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */,
-				59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */,
-				593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */,
-				59D108C61F41A90500065F47 /* FFNavController.m in Sources */,
-				C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */,
-				C705CB791F4D5D23004D72E2 /* FFUserInfo.m in Sources */,
-				59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */,
-				59BFCB541F4D539500CB8CB0 /* APITestVC.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		599057181F32D36E00255F25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				599057211F32D36E00255F25 /* FireFinancialTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		599057231F32D36E00255F25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5990572C1F32D36E00255F25 /* FireFinancialUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        599056FF1F32D36E00255F25 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */,
+                C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */,
+                591F45631F33233A00612927 /* FFCacheManger.m in Sources */,
+                C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
+                599525811F4C054B001A85DE /* FFGenView.m in Sources */,
+                59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
+                5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
+                593D3A011F4D267800E4912F /* UITableView+FF.m in Sources */,
+                59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */,
+                593D3A071F4D26A300E4912F /* UITextField+FF.m in Sources */,
+                593D3A0A1F4D26B700E4912F /* UIButton+FF.m in Sources */,
+                599525801F4C054B001A85DE /* FFAlert.m in Sources */,
+                591F45661F33251F00612927 /* FFBasicApi+Animation.m in Sources */,
+                5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
+                599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
+                593D3A0E1F4D283F00E4912F /* MBProgressHUD+FFXJ.m in Sources */,
+                C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */,
+                5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */,
+                C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */,
+                C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */,
+                59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */,
+                593D39FE1F4D25DE00E4912F /* UIFont+FF.m in Sources */,
+                599057081F32D36E00255F25 /* main.m in Sources */,
+                5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */,
+                599057501F32D43C00255F25 /* FFResponseObject.m in Sources */,
+                593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */,
+                599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */,
+                59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */,
+                593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */,
+                59D108C61F41A90500065F47 /* FFNavController.m in Sources */,
+                C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */,
+                C705CB791F4D5D23004D72E2 /* FFUserInfo.m in Sources */,
+                59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */,
+                59BFCB541F4D539500CB8CB0 /* APITestVC.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        599057181F32D36E00255F25 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                599057211F32D36E00255F25 /* FireFinancialTests.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        599057231F32D36E00255F25 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                5990572C1F32D36E00255F25 /* FireFinancialUITests.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5990571E1F32D36E00255F25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 599057021F32D36E00255F25 /* FireFinancial */;
-			targetProxy = 5990571D1F32D36E00255F25 /* PBXContainerItemProxy */;
-		};
-		599057291F32D36E00255F25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 599057021F32D36E00255F25 /* FireFinancial */;
-			targetProxy = 599057281F32D36E00255F25 /* PBXContainerItemProxy */;
-		};
+        5990571E1F32D36E00255F25 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 599057021F32D36E00255F25 /* FireFinancial */;
+            targetProxy = 5990571D1F32D36E00255F25 /* PBXContainerItemProxy */;
+        };
+        599057291F32D36E00255F25 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 599057021F32D36E00255F25 /* FireFinancial */;
+            targetProxy = 599057281F32D36E00255F25 /* PBXContainerItemProxy */;
+        };
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5990570F1F32D36E00255F25 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				599057101F32D36E00255F25 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		599057141F32D36E00255F25 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				599057151F32D36E00255F25 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
+        5990570F1F32D36E00255F25 /* Main.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                599057101F32D36E00255F25 /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
+        599057141F32D36E00255F25 /* LaunchScreen.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                599057151F32D36E00255F25 /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5990572E1F32D36E00255F25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		5990572F1F32D36E00255F25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		599057311F32D36E00255F25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DRJ42M455V;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/FireFinancial/PrefixHeader.pch";
-				INFOPLIST_FILE = FireFinancial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancial;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		599057321F32D36E00255F25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DRJ42M455V;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/FireFinancial/PrefixHeader.pch";
-				INFOPLIST_FILE = FireFinancial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancial;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		599057341F32D36E00255F25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = DRJ42M455V;
-				INFOPLIST_FILE = FireFinancialTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireFinancial.app/FireFinancial";
-			};
-			name = Debug;
-		};
-		599057351F32D36E00255F25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = DRJ42M455V;
-				INFOPLIST_FILE = FireFinancialTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireFinancial.app/FireFinancial";
-			};
-			name = Release;
-		};
-		599057371F32D36E00255F25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = DRJ42M455V;
-				INFOPLIST_FILE = FireFinancialUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = FireFinancial;
-			};
-			name = Debug;
-		};
-		599057381F32D36E00255F25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = DRJ42M455V;
-				INFOPLIST_FILE = FireFinancialUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = FireFinancial;
-			};
-			name = Release;
-		};
+        5990572E1F32D36E00255F25 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+            };
+            name = Debug;
+        };
+        5990572F1F32D36E00255F25 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        599057311F32D36E00255F25 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = 2E492C0BA0C83B593B1AE806 /* Pods-FireFinancial.debug.xcconfig */;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                DEVELOPMENT_TEAM = DRJ42M455V;
+                GCC_PREFIX_HEADER = "$(SRCROOT)/FireFinancial/PrefixHeader.pch";
+                INFOPLIST_FILE = FireFinancial/Info.plist;
+                IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancial;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TARGETED_DEVICE_FAMILY = 1;
+            };
+            name = Debug;
+        };
+        599057321F32D36E00255F25 /* Release */ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                DEVELOPMENT_TEAM = DRJ42M455V;
+                GCC_PREFIX_HEADER = "$(SRCROOT)/FireFinancial/PrefixHeader.pch";
+                INFOPLIST_FILE = FireFinancial/Info.plist;
+                IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancial;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TARGETED_DEVICE_FAMILY = 1;
+            };
+            name = Release;
+        };
+        599057341F32D36E00255F25 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                BUNDLE_LOADER = "$(TEST_HOST)";
+                DEVELOPMENT_TEAM = DRJ42M455V;
+                INFOPLIST_FILE = FireFinancialTests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialTests;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireFinancial.app/FireFinancial";
+            };
+            name = Debug;
+        };
+        599057351F32D36E00255F25 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                BUNDLE_LOADER = "$(TEST_HOST)";
+                DEVELOPMENT_TEAM = DRJ42M455V;
+                INFOPLIST_FILE = FireFinancialTests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialTests;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireFinancial.app/FireFinancial";
+            };
+            name = Release;
+        };
+        599057371F32D36E00255F25 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                DEVELOPMENT_TEAM = DRJ42M455V;
+                INFOPLIST_FILE = FireFinancialUITests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialUITests;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TEST_TARGET_NAME = FireFinancial;
+            };
+            name = Debug;
+        };
+        599057381F32D36E00255F25 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                DEVELOPMENT_TEAM = DRJ42M455V;
+                INFOPLIST_FILE = FireFinancialUITests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = FS.FireFinancialUITests;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TEST_TARGET_NAME = FireFinancial;
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		599056FE1F32D36E00255F25 /* Build configuration list for PBXProject "FireFinancial" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5990572E1F32D36E00255F25 /* Debug */,
-				5990572F1F32D36E00255F25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		599057301F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancial" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				599057311F32D36E00255F25 /* Debug */,
-				599057321F32D36E00255F25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		599057331F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				599057341F32D36E00255F25 /* Debug */,
-				599057351F32D36E00255F25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		599057361F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				599057371F32D36E00255F25 /* Debug */,
-				599057381F32D36E00255F25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        599056FE1F32D36E00255F25 /* Build configuration list for PBXProject "FireFinancial" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                5990572E1F32D36E00255F25 /* Debug */,
+                5990572F1F32D36E00255F25 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        599057301F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancial" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                599057311F32D36E00255F25 /* Debug */,
+                599057321F32D36E00255F25 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        599057331F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialTests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                599057341F32D36E00255F25 /* Debug */,
+                599057351F32D36E00255F25 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        599057361F32D36E00255F25 /* Build configuration list for PBXNativeTarget "FireFinancialUITests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                599057371F32D36E00255F25 /* Debug */,
+                599057381F32D36E00255F25 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
-	};
-	rootObject = 599056FB1F32D36E00255F25 /* Project object */;
+    };
+    rootObject = 599056FB1F32D36E00255F25 /* Project object */;
 }
