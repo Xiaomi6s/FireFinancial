@@ -7,11 +7,42 @@
 //
 
 #import "FFUserApi.h"
+#import "NSString+FFExtension.h"
+#import "FFUserInfo.h"
 
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
+static NSString * const realNameApi = @"/user/realName";
+static NSString * const registerApi = @"/user/register";
+
 
 @implementation FFUserApi
+
+/**
+ 注册接口
+ 
+ @param phone 电话
+ @param password 密码
+ @param vcode 验证码
+ @param nickName 昵称
+ @param recommendCode 推荐码
+ @param finished 回调
+ */
+- (void)registerWithPhone:(NSString *)phone
+                 password:(NSString *)password
+                    vcode:(NSString *)vcode
+                 nickName:(NSString *)nickName
+            recommendCode:(NSString *)recommendCode
+              returnBlock:(FinishedBlock)finished {
+    NSDictionary *param = @{@"phone":([NSString stringIsEmpty:phone] ? @"" : phone),
+                            @"password":([NSString stringIsEmpty:password] ? @"" : password),
+                            @"vcode":([NSString stringIsEmpty:vcode] ? @"" : vcode),
+                            @"nickName":([NSString stringIsEmpty:nickName] ? @"" : nickName),
+                            @"recommendCode":([NSString stringIsEmpty:recommendCode] ? @"" : recommendCode)};
+    [self asyncPostRequestWithUrl:registerApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
 
 /**
  获取用户信息
@@ -19,7 +50,24 @@ static NSString * const getUserInfoApi = @"/user/myInfo";
  @param finished 回调
  */
 - (void)getUserInfoWithReturnBlock:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:getUserInfoApi parameters:nil infoclass:nil finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:getUserInfoApi parameters:nil infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+/**
+ 实名认证
+ 
+ @param name 真实名字
+ @param cardNumber 身份证号
+ */
+- (void)realNameWithName:(NSString *)name
+              cardNumber:(NSString *)cardNumber
+             returnBlock:(FinishedBlock)finished {
+    
+    NSDictionary *param = @{@"name":name,@"cardNumber":cardNumber};
+    
+    [self asyncPostRequestWithUrl:realNameApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }

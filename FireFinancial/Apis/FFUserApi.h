@@ -11,11 +11,38 @@
 @interface FFUserApi : FFBasicApi
 
 /**
+ 注册接口
+
+ @param phone 电话
+ @param password 密码
+ @param vcode 验证码
+ @param nickName 昵称
+ @param recommendCode 推荐码
+ @param finished 回调
+ */
+- (void)registerWithPhone:(NSString *)phone
+                 password:(NSString *)password
+                    vcode:(NSString *)vcode
+                 nickName:(NSString *)nickName
+            recommendCode:(NSString *)recommendCode
+              returnBlock:(FinishedBlock)finished;
+
+/**
  获取用户信息
  
  @param finished 回调
  */
 - (void)getUserInfoWithReturnBlock:(FinishedBlock)finished;
+
+/**
+ 实名认证
+
+ @param name 真实名字
+ @param cardNumber 身份证号
+ */
+- (void)realNameWithName:(NSString *)name
+              cardNumber:(NSString *)cardNumber
+             returnBlock:(FinishedBlock)finished;
 
 /**
  找回密码(1.已登录,主动发起; 2.未登录忘记密码)
