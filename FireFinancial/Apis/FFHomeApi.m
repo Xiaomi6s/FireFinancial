@@ -10,7 +10,7 @@
 #import "FFRequestTypedef.h"
 
 
-static NSString * const homeApi = @"/Home/finance";
+static NSString * const homeApi = @"/hlc/home/finance";
 
 @implementation FFHomeApi
 

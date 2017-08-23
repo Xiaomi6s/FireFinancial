@@ -29,6 +29,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *str = nil;
+    NSDictionary *dic = @{@"222": str, @"333": @"333",@"666": @"666"};
+    
     self.title = @"apis";
     [self loadData];
     [self.view addSubview:self.tableView];
@@ -79,7 +82,5 @@
     [super didReceiveMemoryWarning];
     
 }
-
-
 
 @end

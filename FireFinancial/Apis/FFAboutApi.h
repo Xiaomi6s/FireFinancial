@@ -10,4 +10,6 @@
 
 @interface FFAboutApi : FFBasicApi
 
+- (void)getAppConfigWithFinished:(FinishedBlock)finished;
+
 @end
