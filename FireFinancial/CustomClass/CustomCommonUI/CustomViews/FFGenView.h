@@ -20,7 +20,7 @@ typedef void(^clickBlock)(void);
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerY;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
-@property (weak, nonatomic) IBOutlet FFButton *btn;
+@property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topImgWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topImgheight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topImgCenterX;

@@ -48,12 +48,12 @@ typedef void(^SetupBlock)(FFAlert *alert);
 /**
  左边按钮
  */
-@property(nonatomic, strong) FFButton *leftBtn;
+@property(nonatomic, strong) UIButton *leftBtn;
 
 /**
  右边按钮
  */
-@property(nonatomic, strong) FFButton *rightBtn;
+@property(nonatomic, strong) UIButton *rightBtn;
 
 
 /**

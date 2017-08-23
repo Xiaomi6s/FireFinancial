@@ -152,10 +152,10 @@ typedef enum : NSUInteger {
         self.btn.hidden = YES;
     }
     [self setSacle];
-    self.backgroundColor = [FFColor bgColor];
-    self.bgView.backgroundColor = [FFColor bgColor];
+    self.backgroundColor = [UIColor bgColor];
+    self.bgView.backgroundColor = [UIColor bgColor];
     [self.btn redborderBtn];
-    [self.btn setBackgroundImage:[[UIImage imgWithColor:[FFColor bgColor] size:self.btn.frame.size] imageWithCornerRadius:self.btn.frame.size.height / 2] forState:UIControlStateNormal];
+    [self.btn setBackgroundImage:[[UIImage imgWithColor:[UIColor bgColor] size:self.btn.frame.size] imageWithCornerRadius:self.btn.frame.size.height / 2] forState:UIControlStateNormal];
     UIImage *img = self.imgage;
     self.topImgView.image = img;
     self.tipsLabel.text = self.message;

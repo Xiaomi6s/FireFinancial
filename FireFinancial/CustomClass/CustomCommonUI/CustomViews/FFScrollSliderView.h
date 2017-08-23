@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@interface FFSilderButton : UIButton
+
+@property (assign, nonatomic) CGFloat currentTransformSx;
+
+@end
+
 typedef NS_ENUM(NSInteger,SceneType) {
     /**
      *  白字蓝底灰背景）

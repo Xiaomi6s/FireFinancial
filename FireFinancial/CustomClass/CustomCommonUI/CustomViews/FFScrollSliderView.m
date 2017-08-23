@@ -7,7 +7,6 @@
 //
 
 #import "FFScrollSliderView.h"
-#import "FFSilderButton.h"
 
 #define Width (self.frame.size.width)
 #define Height (self.frame.size.height)
@@ -18,6 +17,32 @@
 
 static  const CGFloat  bigScale = 1.0;
 static  const CGFloat  normalScale = 0.86;
+
+@implementation FFSilderButton
+
+- (instancetype)init {
+    if (self = [super initWithFrame:CGRectZero]) {
+        self.currentTransformSx = 1.0;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.currentTransformSx = 1.0;
+        
+    }
+    
+    return self;
+}
+
+- (void)setCurrentTransformSx:(CGFloat)currentTransformSx {
+    _currentTransformSx = currentTransformSx;
+    self.transform = CGAffineTransformMakeScale(currentTransformSx, currentTransformSx);
+}
+
+@end
 
 @interface FFScrollSliderView ()<UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 

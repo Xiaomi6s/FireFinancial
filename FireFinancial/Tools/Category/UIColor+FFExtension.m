@@ -10,7 +10,7 @@
 
 @implementation UIColor (FFExtension)
 
-+ (UIColor *)colorWithHexString:(NSString *)colorString{
++ (UIColor *)colorWithHex:(NSString *)colorString{
     NSString *cString = [[colorString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters

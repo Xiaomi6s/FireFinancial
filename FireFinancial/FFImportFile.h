@@ -12,18 +12,19 @@
 #import <Masonry/Masonry.h>
 
 #pragma mark- commonUI
-#import "FFColor.h"
-#import "FFButton.h"
-#import "FFFont.h"
-#import "FFTableView.h"
-#import "FFTextField.h"
-#import "FFLabel.h"
+#import "UIColor+FF.h"
+#import "UIFont+FF.h"
+#import "UITableView+FF.h"
+#import "UITextField+FF.h"
+#import "UILabel+FF.h"
+#import "UIButton+FF.h"
 
 #pragma mark- commonUI+
 #import "UIColor+FFExtension.h"
 #import "UIImage+FFExtension.h"
 #import "UIView+FFExtension.h"
 #import "NSLayoutConstraint+FFExtension.h"
+
 
 
 #endif /* FFImportFile_h */

@@ -1,15 +1,14 @@
 //
-//  FFColor.m
+//  UIColor+FF.m
 //  FireFinancial
 //
-//  Created by 任晓健 on 2017/8/22.
+//  Created by 任晓健 on 2017/8/23.
 //  Copyright © 2017年 rxj. All rights reserved.
 //
 
-#import "FFColor.h"
-#import "UIColor+FFExtension.h"
+#import "UIColor+FF.h"
 
-@implementation FFColor
+@implementation UIColor (FF)
 
 + (UIColor *)bgColor {
     return [UIColor colorWithHex:@"f5f5f5"];

@@ -9,17 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#ifndef DEBUG
-#undef NSLog
-#define NSLog(args, ...)
-#endif
-
-#ifdef DEBUG
-#define DLog(fmt, ...) NSLog((@"%@[%d], %s:" fmt), [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent, __LINE__, __FUNCTION__, ##__VA_ARGS__);
-#else
-#define DLog(...);
-#endif
-
 #import "FFDefine.h"
 #import "FFImportFile.h"
 

@@ -12,12 +12,25 @@
 #import "HomeApi.h"
 @interface ViewController ()
 
+@property(nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation ViewController
 
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    }
+    return _tableView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -29,6 +42,7 @@
     [super didReceiveMemoryWarning];
     
 }
+
 
 
 @end

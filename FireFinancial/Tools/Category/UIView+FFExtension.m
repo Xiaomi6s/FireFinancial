@@ -10,9 +10,23 @@
 
 @implementation UIView (FFExtension)
 
+- (CGSize)ff_size {
+    return self.frame.size;
+}
+
+- (CGFloat)ff_width {
+    return self.ff_size.width;
+}
+
+- (CGFloat)ff_height {
+    return self.ff_size.height;
+}
+
 - (void)setCornerRadius:(float)radius {
     self.layer.cornerRadius = radius;
     self.layer.masksToBounds = YES;
 }
+
+
 
 @end

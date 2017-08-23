@@ -9,6 +9,18 @@
 #ifndef FFDefine_h
 #define FFDefine_h
 
+#pragma mark- 打印
+#ifndef DEBUG
+#undef NSLog
+#define NSLog(args, ...)
+#endif
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%@[%d], %s:" fmt), [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent, __LINE__, __FUNCTION__, ##__VA_ARGS__);
+#else
+#define DLog(...);
+#endif
+
 #pragma mark- 屏幕宽高以及比例
 #define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define ScreenHeight ([UIScreen mainScreen].bounds.size.height)

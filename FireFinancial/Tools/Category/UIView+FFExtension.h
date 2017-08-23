@@ -10,10 +10,16 @@
 
 @interface UIView (FFExtension)
 
+@property(nonatomic, readonly) CGSize ff_size;
+@property(nonatomic, readonly) CGFloat ff_height;
+@property(nonatomic, readonly) CGFloat ff_width;
+
 /**
  设置圆角
 
  @param radius 圆角
  */
 - (void)setCornerRadius:(float)radius;
+
+
 @end

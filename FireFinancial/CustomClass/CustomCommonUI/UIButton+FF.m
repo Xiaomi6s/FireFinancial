@@ -1,16 +1,14 @@
 //
-//  FFButton.m
+//  UIButton+FF.m
 //  FireFinancial
 //
-//  Created by 任晓健 on 2017/8/22.
+//  Created by 任晓健 on 2017/8/23.
 //  Copyright © 2017年 rxj. All rights reserved.
 //
 
-#import "FFButton.h"
-#import "UIImage+FFExtension.h"
-#import "UIColor+FFExtension.h"
+#import "UIButton+FF.h"
 
-@implementation FFButton
+@implementation UIButton (FF)
 
 - (void)setshadowWithColor:(UIColor *)color {
     self.layer.shadowColor = color.CGColor;
@@ -38,8 +36,8 @@
     self.enabled = YES;
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.backgroundColor = [UIColor clearColor];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor redBtnColor]] forState:UIControlStateNormal];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor redBtnColor]] forState:UIControlStateNormal];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
@@ -47,8 +45,8 @@
     self.enabled = YES;
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.backgroundColor = [UIColor clearColor];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor PinkBtnColor]] forState:UIControlStateNormal];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor PinkBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor PinkBtnColor]] forState:UIControlStateNormal];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor PinkBtnHighlightedColor]] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
@@ -56,8 +54,8 @@
     self.enabled = YES;
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.backgroundColor = [UIColor clearColor];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor goldenyellowBtnColor]] forState:UIControlStateNormal];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor goldenyellowBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor goldenyellowBtnColor]] forState:UIControlStateNormal];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor goldenyellowBtnHighlightedColor]] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
@@ -65,8 +63,8 @@
     self.enabled = YES;
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.layer.masksToBounds = YES;
-    [self setBackgroundImage:[UIImage imgWithColor:[FFColor redBtnColor]] forState:UIControlStateNormal];
-    [self setBackgroundImage:[UIImage imgWithColor:[FFColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[UIImage imgWithColor:[UIColor redBtnColor]] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imgWithColor:[UIColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
     
 }
 
@@ -74,18 +72,18 @@
     self.enabled = YES;
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.layer.masksToBounds = YES;
-    [self setBackgroundImage:[UIImage imgWithColor:[FFColor goldenyellowBtnColor]] forState:UIControlStateNormal];
-    [self setBackgroundImage:[UIImage imgWithColor:[FFColor goldenyellowBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[UIImage imgWithColor:[UIColor goldenyellowBtnColor]] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imgWithColor:[UIColor goldenyellowBtnHighlightedColor]] forState:UIControlStateHighlighted];
 }
 - (void)redborderBtn {
     self.enabled = YES;
     self.backgroundColor = [UIColor clearColor];
     self.layer.cornerRadius = self.frame.size.height / 2;
-    self.layer.borderColor = [FFColor redBtnColor].CGColor;
+    self.layer.borderColor = [UIColor redBtnColor].CGColor;
     self.layer.borderWidth = 0.5;
-    [self setBackgroundImage:[[UIImage imgWithColor:[FFColor whiteColor] size:self.frame.size] imageWithCornerRadius:self.frame.size.height / 2] forState:UIControlStateNormal];
-    [self setBackgroundImage:[[UIImage imgWithColor:[FFColor lightPinkColor] size:self.frame.size] imageWithCornerRadius:self.frame.size.height / 2] forState:UIControlStateHighlighted];
-    [self setTitleColor:[FFColor redBtnColor] forState:UIControlStateNormal];
+    [self setBackgroundImage:[[UIImage imgWithColor:[UIColor whiteColor] size:self.frame.size] imageWithCornerRadius:self.frame.size.height / 2] forState:UIControlStateNormal];
+    [self setBackgroundImage:[[UIImage imgWithColor:[UIColor lightPinkColor] size:self.frame.size] imageWithCornerRadius:self.frame.size.height / 2] forState:UIControlStateHighlighted];
+    [self setTitleColor:[UIColor redBtnColor] forState:UIControlStateNormal];
     
 }
 
@@ -95,7 +93,7 @@
     self.layer.cornerRadius = self.frame.size.height / 2;
     NSArray *colors = @[((id)[UIColor colorWithHex:@"ff5855"].CGColor), ((id)[UIColor colorWithHex:@"ff384d"].CGColor)];
     [self setBackgroundImage:[self gradientImgwithColors:colors] forState:UIControlStateNormal];
-    [self setBackgroundImage:[self radiusImgWithcolor:[FFColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[self radiusImgWithcolor:[UIColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self setshadowWithColor:[UIColor colorWithHex:@"FCA9A9"]opacity:1];
 }
@@ -105,7 +103,7 @@
     self.backgroundColor = [UIColor clearColor];
     NSArray *colors = @[((id)[UIColor colorWithHex:@"ff5855"].CGColor), ((id)[UIColor colorWithHex:@"ff384d"].CGColor)];
     [self setBackgroundImage:[self gradientRectImgwithColors:colors] forState:UIControlStateNormal];
-    [self setBackgroundImage:[self rectImgWithColor:[FFColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
+    [self setBackgroundImage:[self rectImgWithColor:[UIColor redBtnHighlightedColor]] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [self setshadowWithColor:[UIColor redBtnColor]];
 }
@@ -163,7 +161,7 @@
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.backgroundColor = [UIColor clearColor];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self setBackgroundImage:[[UIImage imgWithColor:[FFColor separatorColor] size:self.frame.size] imageWithCornerRadius:self.frame.size.height / 2] forState:UIControlStateDisabled];
+    [self setBackgroundImage:[[UIImage imgWithColor:[UIColor separatorColor] size:self.frame.size] imageWithCornerRadius:self.frame.size.height / 2] forState:UIControlStateDisabled];
     self.enabled = NO;
     
 }
@@ -175,12 +173,10 @@
     self.layer.shadowRadius = 0;
     self.backgroundColor = [UIColor clearColor];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self setBackgroundImage:[UIImage imgWithColor:[FFColor separatorColor]
+    [self setBackgroundImage:[UIImage imgWithColor:[UIColor separatorColor]
                                               size:self.frame.size]
                     forState:UIControlStateDisabled];
     self.enabled = NO;
 }
-
-
 
 @end
