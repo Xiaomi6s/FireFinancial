@@ -47,6 +47,7 @@
 		C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB6C1F4D5377004D72E2 /* FFUserApi.m */; };
 		C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */; };
 		C705CB7F1F4D8669004D72E2 /* FFUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */; };
+		C705CB821F4D8BA5004D72E2 /* FFOnlyValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */; };
 		C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
 		C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
 		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
@@ -154,6 +155,8 @@
 		C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFBasicInfo.m; path = FireFinancial/Apis/FFBasicInfo.m; sourceTree = SOURCE_ROOT; };
 		C705CB7D1F4D8669004D72E2 /* FFUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserInfo.h; sourceTree = "<group>"; };
 		C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserInfo.m; sourceTree = "<group>"; };
+		C705CB801F4D8BA5004D72E2 /* FFOnlyValueInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFOnlyValueInfo.h; sourceTree = "<group>"; };
+		C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOnlyValueInfo.m; sourceTree = "<group>"; };
 		C79031D21F32FAB2007333B6 /* FFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtil.h; sourceTree = "<group>"; };
 		C79031D31F32FAB2007333B6 /* FFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtil.m; sourceTree = "<group>"; };
 		C79031D51F32FB93007333B6 /* NSString+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFExtension.h"; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 			children = (
 				C705CB711F4D5CD6004D72E2 /* FFBasicInfo.h */,
 				C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */,
+				C705CB801F4D8BA5004D72E2 /* FFOnlyValueInfo.h */,
+				C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */,
 				C705CB7C1F4D8625004D72E2 /* User */,
 				5978E7F21F4D6B2500E87D94 /* FFAboutInfo.h */,
 				5978E7F31F4D6B2500E87D94 /* FFAboutInfo.m */,
@@ -668,6 +673,7 @@
 				593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */,
 				599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */,
 				59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */,
+				C705CB821F4D8BA5004D72E2 /* FFOnlyValueInfo.m in Sources */,
 				593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */,
 				59D108C61F41A90500065F47 /* FFNavController.m in Sources */,
 				C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */,

@@ -29,6 +29,7 @@
 
 #pragma mark - models
 #import "FFUserInfo.h"
+#import "FFOnlyValueInfo.h"
 
 
 

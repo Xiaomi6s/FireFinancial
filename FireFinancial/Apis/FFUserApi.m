@@ -23,7 +23,7 @@ static NSString * const getValidateCodeApi = @"/user/getValidateCode";
  @param finished 回调
  */
 - (void)registerShowWithReturnBlock:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:registerShowApi parameters:nil infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:registerShowApi parameters:nil infoclass:[FFRegisterShowInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -96,7 +96,7 @@ static NSString * const getValidateCodeApi = @"/user/getValidateCode";
     
     NSDictionary *param = @{@"phone":phone,@"imageCode":imageCode,@"type":type};
     
-    [self asyncPostRequestWithUrl:getValidateCodeApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:getValidateCodeApi parameters:param infoclass:[FFMessageCodeInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     
