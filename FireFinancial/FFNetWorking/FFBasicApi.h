@@ -48,6 +48,21 @@ typedef void(^CacheBlock)(id responseObject);
                        finished:(FinishedBlock)finished;
 
 /**
+ 上传头像
+ 
+ @param url URL
+ @param parameters 参数
+ @param image uiimage
+ @param infoclass 返回json对应的model类
+ @param finished 回调
+ */
+- (void)uploadImageWithUrl:(NSString *)url
+                parameters:(id)parameters
+                     image:(UIImage *)image
+                 infoclass:(Class)infoclass
+                  finished:(FinishedBlock)finished;
+
+/**
  删除所有的请求任务
  */
 - (void)removeAllTask;

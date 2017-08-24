@@ -98,7 +98,14 @@
                          type:(NSString *)type
                   returnBlock:(FinishedBlock)finished;
 
+/**
+ 上传头像
 
+ @param image 图片
+ @param finished 回调
+ */
+- (void)uploadAvatarWithImage:(UIImage *)image
+                  returnBlock:(FinishedBlock)finished;
 
 
 @end

@@ -14,6 +14,8 @@ static NSString * const realNameApi = @"/user/realName";
 static NSString * const registerApi = @"/user/register";
 static NSString * const registerShowApi = @"/user/registerShow";
 static NSString * const getValidateCodeApi = @"/user/getValidateCode";
+static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
+
 
 @implementation FFUserApi
 
@@ -152,6 +154,18 @@ static NSString * const getValidateCodeApi = @"/user/getValidateCode";
         finished(status, response);
     }];
     
+}
+
+/**
+ 上传头像
+ 
+ @param image 图片
+ @param finished 回调
+ */
+- (void)uploadAvatarWithImage:(UIImage *)image returnBlock:(FinishedBlock)finished {
+    [self uploadImageWithUrl:uploadAvatarApi parameters:nil image:image infoclass:nil finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
 }
 
 @end
