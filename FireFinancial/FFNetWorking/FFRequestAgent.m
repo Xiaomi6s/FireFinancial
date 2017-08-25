@@ -55,6 +55,44 @@
     [self.tasks addObject:dict];
 }
 
+- (void)uploadImageWithUrl:(NSString *)url
+                parameters:(id)parameters
+                     image:(UIImage *)image
+                 infoclass:(Class)infoclass
+                  finished:(FinishedBlock)finished {
+    
+    __weak typeof(self) wself = self;
+    FFServerConfig *config = [FFServerConfig instance];
+    NSString *postUrl = [[config.serverIP stringByAppendingString:config.apiVersion]
+                         stringByAppendingString:url];
+    NSLog(@"发起请求--%@",postUrl);
+
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
+    
+    NSURLSessionDataTask *task= [self.manager POST:postUrl parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *fileName = [NSString stringWithFormat:@"%@.png",[formatter stringFromDate:[NSDate date]]];
+        //二进制文件，接口key值，文件路径，图片格式
+        [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpg/png/jpeg"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [wself.tasks removeObject:dict];
+        finished(FFRequestStatusSuccess, responseObject);
+    
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [wself.tasks removeObject:dict];
+        finished(FFRequestStatusFail, error);
+    }];
+    
+    [dict setObject:task forKey:@(url.hash)];
+    [self.tasks addObject:dict];
+}
+
 - (void)removeTask:(NSURLSessionDataTask*)task {
     [task cancel];
     if ([self.tasks containsObject:task]) {

@@ -10,6 +10,14 @@
 
 @interface FFUserApi : FFBasicApi
 
+
+/**
+ 注册顶部tips
+
+ @param finished 回调
+ */
+- (void)registerShowWithReturnBlock:(FinishedBlock)finished;
+
 /**
  注册接口
 
@@ -26,6 +34,35 @@
                  nickName:(NSString *)nickName
             recommendCode:(NSString *)recommendCode
               returnBlock:(FinishedBlock)finished;
+
+/**
+ 登录接口
+ 
+ @param phone 手机号
+ @param password 密码
+ @param finished 回调
+ */
+- (void)loginWithPhone:(NSString *)phone
+              password:(NSString *)password
+           returnBlock:(FinishedBlock)finished;
+
+/**
+ 获取短信验证码
+
+ @param phone 手机号
+ @param imageCode 图形验证码
+ @param type 类型
+ 1.注册时候点击获取验证码 获取图形验证码
+ 2.图形验证码确定之后,获取注册验证码
+ 3.已登录主动修改登录密码时获取验证码
+ 4.未登录忘记密码,获取验证码
+ 
+ @param finished 回调
+ */
+- (void)getValidateCodeWithPhone:(NSString *)phone
+                       imageCode:(NSString *)imageCode
+                            type:(NSString *)type
+                     returnBlock:(FinishedBlock)finished;
 
 /**
  获取用户信息
@@ -61,7 +98,14 @@
                          type:(NSString *)type
                   returnBlock:(FinishedBlock)finished;
 
+/**
+ 上传头像
 
+ @param image 图片
+ @param finished 回调
+ */
+- (void)uploadAvatarWithImage:(UIImage *)image
+                  returnBlock:(FinishedBlock)finished;
 
 
 @end

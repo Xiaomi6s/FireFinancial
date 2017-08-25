@@ -49,6 +49,30 @@
         }
 }
 
+/**
+ 上传头像
+ 
+ @param url URL
+ @param parameters 参数
+ @param image uiimage
+ @param infoclass 返回json对应的model类
+ @param finished 回调
+ */
+- (void)uploadImageWithUrl:(NSString *)url
+                parameters:(id)parameters
+                     image:(UIImage *)image
+                 infoclass:(Class)infoclass
+                  finished:(FinishedBlock)finished {
+    if (self.isLoadingAnimtion) {
+        [self loadingAnimationInView:[self viewOfcurrentVC]];
+    }
+    
+    [[FFRequestAgent shareInstance] uploadImageWithUrl:url parameters:nil image:image infoclass:nil finished:^(FFRequestStatus status, id response) {
+        FFResponseObject *responseObject = [FFResponseObject instanceWithReturnObject: response infoClass:infoclass];
+        finished(status, responseObject);
+    }];
+}
+
 - (void)removeAllTask {
     [[FFRequestAgent shareInstance] removeAllTask];
 }
