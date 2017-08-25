@@ -10,6 +10,6 @@
 
 @interface FFHomeApi : FFBasicApi
 
-- (void)getHomefinished:(FinishedBlock)finished;
+- (void)getHomeIndexWithFinished:(FinishedBlock)finished;
 
 @end

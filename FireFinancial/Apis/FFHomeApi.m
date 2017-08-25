@@ -10,11 +10,11 @@
 #import "FFRequestTypedef.h"
 
 
-static NSString * const homeApi = @"/hlc/home/finance";
+static NSString * const homeApi = @"/hlc/home/index";
 
 @implementation FFHomeApi
 
-- (void)getHomefinished:(FinishedBlock)finished {
+- (void)getHomeIndexWithFinished:(FinishedBlock)finished {
     [self asyncPostRequestWithUrl:homeApi parameters:nil infoclass:nil finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
