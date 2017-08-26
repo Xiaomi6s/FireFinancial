@@ -10,6 +10,7 @@
 #import "FFRequestAgent.h"
 #import "FFRequestCache.h"
 #import "FFBasicApi+Animation.h"
+
 @implementation FFBasicApi
 
 - (void)asyncPostRequestWithUrl:(NSString *)url
