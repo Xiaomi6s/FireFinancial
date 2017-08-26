@@ -36,7 +36,9 @@
     NSData *aesData = [aesStr dataUsingEncoding:NSUTF8StringEncoding];
     NSData *aesData2 = [[NSData alloc] initWithBase64EncodedData:aesData options:0];
     NSString *str11 = [[NSString alloc] initWithData:aesData2 encoding:NSUTF8StringEncoding];
-    
+    NSString *encodStr = @"hello mei";
+    NSString *enStr = [encodStr AES_encrypt];
+    NSString *denStr = [enStr AES_decrypt];
     NSString *str3 = [str11 AES_decrypt];
     
     self.title = @"apis";
