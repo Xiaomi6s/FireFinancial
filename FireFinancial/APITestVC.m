@@ -7,6 +7,7 @@
 //
 
 #import "APITestVC.h"
+#import "FFUserApi.h"
 
 @interface APITestVC ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    FFUserApi *userApi = [FFUserApi new];
+    [userApi loginWithPhone:@"15800436830" password:@"123456a" returnBlock:^(FFRequestStatus status, id response) {
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

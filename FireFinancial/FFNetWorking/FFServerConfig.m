@@ -9,7 +9,7 @@
 #import "FFServerConfig.h"
 
 static NSString *const releaseServerIP = @"https://newhuo.yonglibao.com";//线上环境
-static NSString *const debugServerIP = @"http://hlctest.yonglibao.com"; //测试环境
+static NSString *const debugServerIP = @"http://118.190.99.217/http"; //测试环境
 
 @implementation FFServerConfig
 
@@ -18,7 +18,7 @@ static NSString *const debugServerIP = @"http://hlctest.yonglibao.com"; //测试
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
-        instance.apiVersion = @"/v2";
+        instance.apiVersion = @"/hlc";
         [instance setupServerIP];
     });
     return instance;
@@ -26,9 +26,9 @@ static NSString *const debugServerIP = @"http://hlctest.yonglibao.com"; //测试
 
 - (void)setupServerIP {
 #ifdef DEBUG
-    self.serverIP = releaseServerIP;
-#else
     self.serverIP = debugServerIP;
+#else
+    self.serverIP = releaseServerIP;
 #endif
 }
 

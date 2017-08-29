@@ -9,15 +9,20 @@
 #import "FFUserApi.h"
 #import "FFWithdrawInfo.h"
 
+#import "FFEarnings.h"
+
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
 static NSString * const realNameApi = @"/user/realName";
 static NSString * const registerApi = @"/user/register";
+static NSString * const loginApi = @"/user/login";
 static NSString * const registerShowApi = @"/user/registerShow";
 static NSString * const getValidateCodeApi = @"/user/getValidateCode";
 static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
 static NSString * const withdrawLoadingInfoApi = @"/user/withdrawLoadingInfo";
 static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
+static NSString * const earningsListApi = @"/user/earningsList";
+
 
 
 @implementation FFUserApi
@@ -75,7 +80,7 @@ static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
     
     NSDictionary *param = @{@"phone":phone,@"password":password};
     
-    [self asyncPostRequestWithUrl:registerApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:loginApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     
@@ -198,6 +203,17 @@ static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
         finished(status, response);
     }];
     
+}
+
+- (void)earningsListWithlastDate:(NSString *)lastDate
+                        finished:(FinishedBlock)finished {
+    NSDictionary *param = @{@"lastDate": lastDate};
+    [self asyncPostRequestWithUrl:earningsListApi
+                       parameters:param
+                        infoclass:[FFEarnings class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
 }
 
 

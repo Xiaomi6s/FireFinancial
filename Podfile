@@ -5,4 +5,5 @@ target 'FireFinancial' do
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'Masonry', '~> 1.0.2'
     pod 'PINCache', '~> 3.0.1-beta.5'
+    pod 'OpenUDID', '~> 1.0.0'
 end

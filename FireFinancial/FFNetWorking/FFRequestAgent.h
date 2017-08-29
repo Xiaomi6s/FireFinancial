@@ -29,6 +29,7 @@
  存放发起的请求
  */
 @property(nonatomic, strong) NSMutableArray *tasks;
+@property(nonatomic, strong) NSMutableArray *requestID;
 
 
 /**

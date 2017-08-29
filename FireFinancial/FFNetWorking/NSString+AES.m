@@ -9,7 +9,6 @@
 #import "NSString+AES.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
-//#import "GTMBase64.h"
 
 static NSString *const PSW_AES_KEY = @"hellohellohelloo";
 static NSString *const AES_IV_PARAMETER = @"";
@@ -64,6 +63,7 @@ static NSString *const AES_IV_PARAMETER = @"";
  *  @param key       key
  *  @param iv        向量
  *
+ *  return
  */
 - (NSData *)AES128operation:(CCOperation)operation data:(NSData *)data key:(NSString *)key iv:(NSString *)iv {
     char keyPtr[kCCKeySizeAES128 + 1];
