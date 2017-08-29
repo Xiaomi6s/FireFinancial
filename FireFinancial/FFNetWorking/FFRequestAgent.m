@@ -56,11 +56,14 @@ static NSString *const publicKey = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPrKM
    }
                                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                                 [wself.tasks removeObject:taskDict];
-                                                
+                                                NSData *responeseData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+                                                NSString *responseStr = [[NSString alloc] initWithData:responeseData encoding:NSUTF8StringEncoding];
+                                                DLog(@"%@",responseStr);
                                                 finished(FFRequestStatusSuccess, responseObject);
        
    }
                                             failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                                DLog(@"%@",error);
                                                 [wself.tasks removeObject:taskDict];
                                                  finished(FFRequestStatusFail, error);
        

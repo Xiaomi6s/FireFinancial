@@ -17,6 +17,7 @@
 
 
 - (void)setup {
+    self.window.backgroundColor = [UIColor whiteColor];
     ViewController *vc = [ViewController new];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;

@@ -11,6 +11,7 @@
 #import "FFOnlyValueInfo.h"
 #import "FFInvestInfo.h"
 #import "FFLiquidTransferInfo.h"
+#import "FFRegularTransferInfo.h"
 #import "FFTodayRateInfo.h"
 #import "FFRegularTimeLineInfo.h"
 
@@ -121,6 +122,26 @@ static NSString * const projectTodayRateApi = @"/project/todayRate";
     [self asyncPostRequestWithUrl:liquidTransferSubmitApi
                        parameters:param
                         infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+- (void)regularTransferSendCaptchaWithFinisd:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:regularTransferSendCaptchaApi
+                       parameters:nil
+                        infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+- (void)regularTransferLoadingWithlastId:(NSString *)lastId
+                                finished:(FinishedBlock)finished {
+    NSDictionary *param = @{@"lastId": lastId};
+    [self asyncPostRequestWithUrl:regularTransferLoadingApi
+                       parameters:param
+                        infoclass:[FFRegularTransferInfo class]
                          finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];

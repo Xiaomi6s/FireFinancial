@@ -86,4 +86,11 @@
 - (void)liquidTransferSubmitWithMoney:(NSString *)money
                              finished:(FinishedBlock)finished;
 
+/**
+ 定期变现发送验证码API
+
+ @param finished finished description
+ */
+- (void)regularTransferSendCaptchaWithFinisd:(FinishedBlock)finished;
+
 @end
