@@ -133,5 +133,12 @@
 - (void)earningsListWithlastDate:(NSString *)lastDate
                         finished:(FinishedBlock)finished;
 
+/**
+ 获取用户资产
+
+ @param finished 回调
+ */
+- (void)getUserAssetWithReturnBlock:(FinishedBlock)finished;
+
 
 @end
