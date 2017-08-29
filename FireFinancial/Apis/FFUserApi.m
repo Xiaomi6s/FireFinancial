@@ -11,6 +11,7 @@
 #import "FFUserAssetInfo.h"
 #import "FFEarnings.h"
 #import "FFRechargeLodingInfo.h"
+#import "FFMessageListInfo.h"
 
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
@@ -26,6 +27,8 @@ static NSString * const earningsListApi = @"/user/earningsList";
 static NSString * const queryPayResultApi = @"/user/queryPayResult";
 static NSString * const userAssetApi = @"/user/asset";
 static NSString * const userRechargeApi = @"/user/recharge";
+static NSString * const messageListApi = @"/message/list";
+static NSString * const updateMessageStatusApi = @"/message/upMessageStatus";
 
 @implementation FFUserApi
 
@@ -291,13 +294,50 @@ static NSString * const userRechargeApi = @"/user/recharge";
                                   sms:(NSString *)sms
                            businessNo:(NSString *)businessNo
                           returnBlock:(FinishedBlock)finished {
+     NSDictionary *param = @{@"bindCardNo": bindCardNo,@"amount":amount,@"sms":sms,@"businessNo":businessNo};
     [self asyncPostRequestWithUrl:userRechargeApi
-                       parameters:nil
+                       parameters:param
                         infoclass:[FFRechargeBusinessNoInfo class]
                          finished:^(FFRequestStatus status, id response) {
                              finished(status, response);
                          }];
     
+}
+
+/**
+ 获取消息和公告列表
+ 
+ @param messageId 消息id 分页用 第一次传空字符串
+ @param type 1公告 2消息
+ */
+- (void)getMessageListWithMessageId:(NSString *)messageId
+                               type:(NSString *)type
+                        returnBlock:(FinishedBlock)finished {
+    NSDictionary *param = @{@"messageId": messageId,@"type":type};
+    [self asyncPostRequestWithUrl:messageListApi
+                       parameters:param
+                        infoclass:[FFMessageListInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+
+}
+
+/**
+ 更新消息状态为已读
+ 
+ @param ids “19,21,245”
+ @param finished 回调
+ */
+- (void)updateMessageStatusWithMessageIds:(NSString *)ids
+                              returnBlock:(FinishedBlock)finished{
+    NSDictionary *param = @{@"ids": ids};
+    [self asyncPostRequestWithUrl:updateMessageStatusApi
+                       parameters:param
+                        infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
 }
 
 @end
