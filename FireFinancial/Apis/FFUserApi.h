@@ -133,5 +133,36 @@
 - (void)earningsListWithlastDate:(NSString *)lastDate
                         finished:(FinishedBlock)finished;
 
+/**
+ 获取用户资产
+
+ @param finished 回调
+ */
+- (void)getUserAssetWithReturnBlock:(FinishedBlock)finished;
+
+/**
+ 加载用户充值页面的信息
+
+ @param finished 回调
+ */
+- (void)getUserRechargeLoadingInfoWithReturnBlock:(FinishedBlock)finished;
+
+/**
+ 充值接口
+
+ @param bindCardNo 充值卡号
+ @param amount 充值金额
+ @param bindCardCode 绑卡短信验证码
+ @param sms 充值短信验证码
+ @param businessNo 商户流水号
+ @param finished 回调
+ */
+- (void)rechargeRequestWithbindCardNo:(NSString *)bindCardNo
+                               amount:(NSString *)amount
+                         bindCardCode:(NSString *)bindCardCode
+                                  sms:(NSString *)sms
+                           businessNo:(NSString *)businessNo
+                          returnBlock:(FinishedBlock)finished;
+
 
 @end

@@ -22,6 +22,8 @@
 
 @implementation FFDealInfo
 
+@end
 
+@implementation FFRechargeBusinessNoInfo
 
 @end

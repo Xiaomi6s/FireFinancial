@@ -8,8 +8,9 @@
 
 #import "FFUserApi.h"
 #import "FFWithdrawInfo.h"
-
+#import "FFUserAssetInfo.h"
 #import "FFEarnings.h"
+#import "FFRechargeLodingInfo.h"
 
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
@@ -17,13 +18,14 @@ static NSString * const realNameApi = @"/user/realName";
 static NSString * const registerApi = @"/user/register";
 static NSString * const loginApi = @"/login/submit";
 static NSString * const registerShowApi = @"/user/registerShow";
-static NSString * const getValidateCodeApi = @"/user/getValidateCode";
+static NSString * const getValidateCodeApi = @"/Security/getValidateCode";
 static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
 static NSString * const withdrawLoadingInfoApi = @"/user/withdrawLoadingInfo";
 static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
 static NSString * const earningsListApi = @"/user/earningsList";
-
-
+static NSString * const queryPayResultApi = @"/user/queryPayResult";
+static NSString * const userAssetApi = @"/user/asset";
+static NSString * const userRechargeApi = @"/user/recharge";
 
 @implementation FFUserApi
 
@@ -33,7 +35,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
  @param finished 回调
  */
 - (void)registerShowWithReturnBlock:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:registerShowApi parameters:nil infoclass:[FFRegisterShowInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:registerShowApi
+                       parameters:nil
+                        infoclass:[FFRegisterShowInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -62,7 +67,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
                             @"recommendCode":([NSString stringIsEmpty:recommendCode] ? @"" : recommendCode)};
 
     
-    [self asyncPostRequestWithUrl:registerApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:registerApi
+                       parameters:param
+                        infoclass:[FFUserInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -80,7 +88,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
     
     NSDictionary *param = @{@"phone":phone,@"password":password};
     
-    [self asyncPostRequestWithUrl:loginApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:loginApi
+                       parameters:param
+                        infoclass:[FFUserInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     
@@ -106,7 +117,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
     
     NSDictionary *param = @{@"phone":phone,@"imageCode":imageCode,@"type":type};
     
-    [self asyncPostRequestWithUrl:getValidateCodeApi parameters:param infoclass:[FFMessageCodeInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:getValidateCodeApi
+                       parameters:param
+                        infoclass:[FFMessageCodeInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     
@@ -118,7 +132,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
  @param finished 回调
  */
 - (void)getUserInfoWithReturnBlock:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:getUserInfoApi parameters:nil infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:getUserInfoApi
+                       parameters:nil
+                        infoclass:[FFUserInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -135,7 +152,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
     
     NSDictionary *param = @{@"name":name,@"cardNumber":cardNumber};
     
-    [self asyncPostRequestWithUrl:realNameApi parameters:param infoclass:[FFUserInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:realNameApi
+                       parameters:param
+                        infoclass:[FFUserInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -158,7 +178,10 @@ static NSString * const earningsListApi = @"/user/earningsList";
     
     NSDictionary *param = @{@"phone":phone,@"newPassword":newPassword,@"oldPassword":oldPassword,@"validateCode":validateCode,@"type":type};
     
-    [self asyncPostRequestWithUrl:findPasswordApi parameters:param infoclass:nil finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:findPasswordApi
+                       parameters:param
+                        infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     
@@ -171,7 +194,11 @@ static NSString * const earningsListApi = @"/user/earningsList";
  @param finished 回调
  */
 - (void)uploadAvatarWithImage:(UIImage *)image returnBlock:(FinishedBlock)finished {
-    [self uploadImageWithUrl:uploadAvatarApi parameters:nil image:image infoclass:nil finished:^(FFRequestStatus status, id response) {
+    [self uploadImageWithUrl:uploadAvatarApi
+                  parameters:nil
+                       image:image
+                   infoclass:nil
+                    finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -182,7 +209,9 @@ static NSString * const earningsListApi = @"/user/earningsList";
  @param finished 回调
  */
 - (void)getWithdrawInfoWithReturnBlock:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:withdrawLoadingInfoApi parameters:nil infoclass:[FFWithdrawInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:withdrawLoadingInfoApi
+                       parameters:nil infoclass:[FFWithdrawInfo class]
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }
@@ -199,7 +228,9 @@ static NSString * const earningsListApi = @"/user/earningsList";
                       returnBlock:(FinishedBlock)finished{
     NSDictionary *param = @{@"bankId":bankId,@"withdrawMoney":withdrawMoney};
     
-    [self asyncPostRequestWithUrl:withdrawConfirmApi parameters:param infoclass:nil finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:withdrawConfirmApi
+                       parameters:param infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     
@@ -216,5 +247,57 @@ static NSString * const earningsListApi = @"/user/earningsList";
                          }];
 }
 
+/**
+ 获取用户资产
+ 
+ @param finished 回调
+ */
+- (void)getUserAssetWithReturnBlock:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:userAssetApi
+                       parameters:nil
+                        infoclass:[FFUserAssetInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+}
+
+/**
+ 加载用户充值页面的信息
+ 
+ @param finished 回调
+ */
+- (void)getUserRechargeLoadingInfoWithReturnBlock:(FinishedBlock)finished{
+    [self asyncPostRequestWithUrl:queryPayResultApi
+                       parameters:nil
+                        infoclass:[FFRechargeLodingInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+}
+
+/**
+ 充值接口
+ 
+ @param bindCardNo 充值卡号
+ @param amount 充值金额
+ @param bindCardCode 绑卡短信验证码
+ @param sms 充值短信验证码
+ @param businessNo 商户流水号
+ @param finished 回调
+ */
+- (void)rechargeRequestWithbindCardNo:(NSString *)bindCardNo
+                               amount:(NSString *)amount
+                         bindCardCode:(NSString *)bindCardCode
+                                  sms:(NSString *)sms
+                           businessNo:(NSString *)businessNo
+                          returnBlock:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:userRechargeApi
+                       parameters:nil
+                        infoclass:[FFRechargeBusinessNoInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+    
+}
 
 @end

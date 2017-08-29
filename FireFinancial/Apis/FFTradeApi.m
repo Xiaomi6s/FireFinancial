@@ -12,6 +12,9 @@
 #import "FFInvestInfo.h"
 #import "FFLiquidTransferInfo.h"
 #import "FFRegularTransferInfo.h"
+#import "FFTodayRateInfo.h"
+#import "FFRegularTimeLineInfo.h"
+
 static NSString *const getRegularInvestListApi = @"/trade/getRegularInvestList";
 static NSString *const investApi = @"/trade/invest";
 static NSString *const investInfoApi = @"/trade/investInfo";
@@ -23,7 +26,41 @@ static NSString *const regularTransferLoadingApi = @"/trade/regularTransferLoadi
 static NSString *const regularTransferSubmitApi = @"/trade/regularTransferSubmit";
 static NSString *const getTransferListApi = @"/trade/getTransferList";
 
+static NSString * const projectTodayRateApi = @"/project/todayRate";
+
 @implementation FFTradeApi
+
+/**
+ 获取今日撮合年化利率
+ 
+ @param type 类型 1:综合 2:零活宝 3:定期宝
+ @param finished 回调
+ */
+- (void)getTradeTodayRateInfoWithType:(NSString *)type
+                          returnBlock:(FinishedBlock)finished {
+    NSDictionary *param = @{@"type":type};
+
+    [self asyncPostRequestWithUrl:projectTodayRateApi parameters:param infoclass:[FFTodayRateInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+    
+}
+
+/**
+ 获取定期投资项目的回款时间轴信息
+ 
+ @param investId 定期项目id
+ @param finished 回调
+ */
+- (void)getRegularBackMoneyTimeLineWithInvestId:(NSString *)investId
+                                    returnBlock:(FinishedBlock)finished {
+    NSDictionary *param = @{@"investId":investId};
+    
+    [self asyncPostRequestWithUrl:projectTodayRateApi parameters:param infoclass:[FFRegularTimeLineInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
 
 - (void)getRegularInvestListWithPid:(NSString *)pid
                            finished:(FinishedBlock)finished {
