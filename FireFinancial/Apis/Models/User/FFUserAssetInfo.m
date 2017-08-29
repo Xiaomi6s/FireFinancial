@@ -6,8 +6,8 @@
 //  Copyright © 2017年 rxj. All rights reserved.
 //
 
-#import "FFUserAssetinfo.h"
+#import "FFUserAssetInfo.h"
 
-@implementation FFUserAssetinfo
+@implementation FFUserAssetInfo
 
 @end

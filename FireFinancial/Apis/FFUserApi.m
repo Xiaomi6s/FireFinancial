@@ -8,8 +8,9 @@
 
 #import "FFUserApi.h"
 #import "FFWithdrawInfo.h"
-
+#import "FFUserAssetInfo.h"
 #import "FFEarnings.h"
+#import "FFRechargeLodingInfo.h"
 
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
@@ -22,8 +23,9 @@ static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
 static NSString * const withdrawLoadingInfoApi = @"/user/withdrawLoadingInfo";
 static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
 static NSString * const earningsListApi = @"/user/earningsList";
-
-
+static NSString * const queryPayResultApi = @"/user/queryPayResult";
+static NSString * const userAssetApi = @"/user/asset";
+static NSString * const userRechargeApi = @"/user/recharge";
 
 @implementation FFUserApi
 
@@ -251,14 +253,51 @@ static NSString * const earningsListApi = @"/user/earningsList";
  @param finished 回调
  */
 - (void)getUserAssetWithReturnBlock:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:earningsListApi
+    [self asyncPostRequestWithUrl:userAssetApi
                        parameters:nil
-                        infoclass:[FFEarnings class]
+                        infoclass:[FFUserAssetInfo class]
                          finished:^(FFRequestStatus status, id response) {
                              finished(status, response);
                          }];
 }
 
+/**
+ 加载用户充值页面的信息
+ 
+ @param finished 回调
+ */
+- (void)getUserRechargeLoadingInfoWithReturnBlock:(FinishedBlock)finished{
+    [self asyncPostRequestWithUrl:queryPayResultApi
+                       parameters:nil
+                        infoclass:[FFRechargeLodingInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+}
 
+/**
+ 充值接口
+ 
+ @param bindCardNo 充值卡号
+ @param amount 充值金额
+ @param bindCardCode 绑卡短信验证码
+ @param sms 充值短信验证码
+ @param businessNo 商户流水号
+ @param finished 回调
+ */
+- (void)rechargeRequestWithbindCardNo:(NSString *)bindCardNo
+                               amount:(NSString *)amount
+                         bindCardCode:(NSString *)bindCardCode
+                                  sms:(NSString *)sms
+                           businessNo:(NSString *)businessNo
+                          returnBlock:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:userRechargeApi
+                       parameters:nil
+                        infoclass:[FFRechargeBusinessNoInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+    
+}
 
 @end

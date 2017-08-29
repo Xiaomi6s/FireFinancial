@@ -8,7 +8,7 @@
 
 #import "FFBasicInfo.h"
 
-@interface FFUserAssetinfo : FFBasicInfo
+@interface FFUserAssetInfo : FFBasicInfo
 
 /**
  昨日综合年化率

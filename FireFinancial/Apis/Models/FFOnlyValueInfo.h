@@ -39,4 +39,13 @@
 
 @end
 
+@interface FFRechargeBusinessNoInfo : FFBasicInfo
+
+/**
+ 商户流水号
+ */
+@property (nonatomic, copy) NSString *businessNo;
+
+@end
+
 

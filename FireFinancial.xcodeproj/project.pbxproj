@@ -60,7 +60,8 @@
 		C7DDD34A1F5557370064D2EE /* FFTodayRateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3491F5557370064D2EE /* FFTodayRateInfo.m */; };
 		C7DDD34D1F5557400064D2EE /* FFWithdrawInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */; };
 		C7DDD3501F555E760064D2EE /* FFRegularTimeLineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD34F1F555E760064D2EE /* FFRegularTimeLineInfo.m */; };
-		C7DDD3531F5561280064D2EE /* FFUserAssetinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3521F5561280064D2EE /* FFUserAssetinfo.m */; };
+		C7DDD3531F5561280064D2EE /* FFUserAssetInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3521F5561280064D2EE /* FFUserAssetInfo.m */; };
+		C7DDD3561F556C3E0064D2EE /* FFRechargeLodingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3551F556C3E0064D2EE /* FFRechargeLodingInfo.m */; };
 		D706C5821F53FF2A00D0A21F /* NSObject+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = D706C5811F53FF2A00D0A21F /* NSObject+FF.m */; };
 		D756409A1F54085E00313C25 /* FFEarnings.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640991F54085E00313C25 /* FFEarnings.m */; };
 		D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D756409C1F540B0E00313C25 /* FFActivityApi.m */; };
@@ -198,8 +199,10 @@
 		C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWithdrawInfo.m; sourceTree = "<group>"; };
 		C7DDD34E1F555E760064D2EE /* FFRegularTimeLineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRegularTimeLineInfo.h; sourceTree = "<group>"; };
 		C7DDD34F1F555E760064D2EE /* FFRegularTimeLineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRegularTimeLineInfo.m; sourceTree = "<group>"; };
-		C7DDD3511F5561280064D2EE /* FFUserAssetinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserAssetinfo.h; sourceTree = "<group>"; };
-		C7DDD3521F5561280064D2EE /* FFUserAssetinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserAssetinfo.m; sourceTree = "<group>"; };
+		C7DDD3511F5561280064D2EE /* FFUserAssetInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUserAssetInfo.h; sourceTree = "<group>"; };
+		C7DDD3521F5561280064D2EE /* FFUserAssetInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserAssetInfo.m; sourceTree = "<group>"; };
+		C7DDD3541F556C3E0064D2EE /* FFRechargeLodingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRechargeLodingInfo.h; sourceTree = "<group>"; };
+		C7DDD3551F556C3E0064D2EE /* FFRechargeLodingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRechargeLodingInfo.m; sourceTree = "<group>"; };
 		D706C5801F53FF2A00D0A21F /* NSObject+FF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FF.h"; sourceTree = "<group>"; };
 		D706C5811F53FF2A00D0A21F /* NSObject+FF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FF.m"; sourceTree = "<group>"; };
 		D75640981F54085E00313C25 /* FFEarnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEarnings.h; sourceTree = "<group>"; };
@@ -485,8 +488,10 @@
 				C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */,
 				D75640981F54085E00313C25 /* FFEarnings.h */,
 				D75640991F54085E00313C25 /* FFEarnings.m */,
-				C7DDD3511F5561280064D2EE /* FFUserAssetinfo.h */,
-				C7DDD3521F5561280064D2EE /* FFUserAssetinfo.m */,
+				C7DDD3511F5561280064D2EE /* FFUserAssetInfo.h */,
+				C7DDD3521F5561280064D2EE /* FFUserAssetInfo.m */,
+				C7DDD3541F556C3E0064D2EE /* FFRechargeLodingInfo.h */,
+				C7DDD3551F556C3E0064D2EE /* FFRechargeLodingInfo.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -770,9 +775,10 @@
 				59A352F71F4D8B2300A1B5B2 /* FFIndexInfo.m in Sources */,
 				C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */,
 				D75640B71F554F0100313C25 /* FFLiquidTransferInfo.m in Sources */,
+				C7DDD3561F556C3E0064D2EE /* FFRechargeLodingInfo.m in Sources */,
 				5990574F1F32D43C00255F25 /* FFRequestAgent.m in Sources */,
 				C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */,
-				C7DDD3531F5561280064D2EE /* FFUserAssetinfo.m in Sources */,
+				C7DDD3531F5561280064D2EE /* FFUserAssetInfo.m in Sources */,
 				C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */,
 				59ABF9201F32F0900044E2D9 /* FFRequestCache.m in Sources */,
 				593D39FE1F4D25DE00E4912F /* UIFont+FF.m in Sources */,
