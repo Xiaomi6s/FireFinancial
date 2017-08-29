@@ -59,6 +59,13 @@
 		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
 		C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DC1F330440007333B6 /* UIView+FFExtension.m */; };
 		C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */; };
+		D706C5821F53FF2A00D0A21F /* NSObject+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = D706C5811F53FF2A00D0A21F /* NSObject+FF.m */; };
+		D756409A1F54085E00313C25 /* FFEarnings.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640991F54085E00313C25 /* FFEarnings.m */; };
+		D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D756409C1F540B0E00313C25 /* FFActivityApi.m */; };
+		D75640A01F540F0800313C25 /* FFActivityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D756409F1F540F0800313C25 /* FFActivityInfo.m */; };
+		D75640A31F54112400313C25 /* FFCashActivityApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640A21F54112400313C25 /* FFCashActivityApi.m */; };
+		D75640A61F5412F200313C25 /* FFSiginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640A51F5412F200313C25 /* FFSiginInfo.m */; };
+		D75640A91F553B9400313C25 /* FFTradeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640A81F553B9400313C25 /* FFTradeApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +191,20 @@
 		C79031DC1F330440007333B6 /* UIView+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFExtension.m"; sourceTree = "<group>"; };
 		C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFExtension.h"; sourceTree = "<group>"; };
 		C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFExtension.m"; sourceTree = "<group>"; };
+		D706C5801F53FF2A00D0A21F /* NSObject+FF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FF.h"; sourceTree = "<group>"; };
+		D706C5811F53FF2A00D0A21F /* NSObject+FF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FF.m"; sourceTree = "<group>"; };
+		D75640981F54085E00313C25 /* FFEarnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEarnings.h; sourceTree = "<group>"; };
+		D75640991F54085E00313C25 /* FFEarnings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEarnings.m; sourceTree = "<group>"; };
+		D756409B1F540B0E00313C25 /* FFActivityApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActivityApi.h; sourceTree = "<group>"; };
+		D756409C1F540B0E00313C25 /* FFActivityApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActivityApi.m; sourceTree = "<group>"; };
+		D756409E1F540F0800313C25 /* FFActivityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActivityInfo.h; sourceTree = "<group>"; };
+		D756409F1F540F0800313C25 /* FFActivityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActivityInfo.m; sourceTree = "<group>"; };
+		D75640A11F54112400313C25 /* FFCashActivityApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCashActivityApi.h; sourceTree = "<group>"; };
+		D75640A21F54112400313C25 /* FFCashActivityApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCashActivityApi.m; sourceTree = "<group>"; };
+		D75640A41F5412F200313C25 /* FFSiginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSiginInfo.h; sourceTree = "<group>"; };
+		D75640A51F5412F200313C25 /* FFSiginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSiginInfo.m; sourceTree = "<group>"; };
+		D75640A71F553B9400313C25 /* FFTradeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTradeApi.h; sourceTree = "<group>"; };
+		D75640A81F553B9400313C25 /* FFTradeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTradeApi.m; sourceTree = "<group>"; };
 		F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +247,12 @@
 				C705CB881F4EC899004D72E2 /* FFAssetApi.m */,
 				59BFCB561F4D5CB500CB8CB0 /* FFAboutApi.h */,
 				59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */,
+				D756409B1F540B0E00313C25 /* FFActivityApi.h */,
+				D756409C1F540B0E00313C25 /* FFActivityApi.m */,
+				D75640A11F54112400313C25 /* FFCashActivityApi.h */,
+				D75640A21F54112400313C25 /* FFCashActivityApi.m */,
+				D75640A71F553B9400313C25 /* FFTradeApi.h */,
+				D75640A81F553B9400313C25 /* FFTradeApi.m */,
 				59BFCB4F1F4D537900CB8CB0 /* apis.plist */,
 			);
 			path = Apis;
@@ -256,6 +283,10 @@
 				59A352F31F4D857800A1B5B2 /* FFEarningsInfo.m */,
 				59A352F51F4D8B2300A1B5B2 /* FFIndexInfo.h */,
 				59A352F61F4D8B2300A1B5B2 /* FFIndexInfo.m */,
+				D756409E1F540F0800313C25 /* FFActivityInfo.h */,
+				D756409F1F540F0800313C25 /* FFActivityInfo.m */,
+				D75640A41F5412F200313C25 /* FFSiginInfo.h */,
+				D75640A51F5412F200313C25 /* FFSiginInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +399,8 @@
 				599057491F32D43C00255F25 /* FFRequestAgent.m */,
 				5990574A1F32D43C00255F25 /* FFResponseObject.h */,
 				5990574B1F32D43C00255F25 /* FFResponseObject.m */,
+				D706C5801F53FF2A00D0A21F /* NSObject+FF.h */,
+				D706C5811F53FF2A00D0A21F /* NSObject+FF.m */,
 				591F45641F33251F00612927 /* FFBasicApi+Animation.h */,
 				591F45651F33251F00612927 /* FFBasicApi+Animation.m */,
 				59A8F6711F4EC209005C464A /* RSAEncryptor.h */,
@@ -435,6 +468,8 @@
 			children = (
 				C705CB7D1F4D8669004D72E2 /* FFUserInfo.h */,
 				C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */,
+				D75640981F54085E00313C25 /* FFEarnings.h */,
+				D75640991F54085E00313C25 /* FFEarnings.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -683,6 +718,7 @@
 				C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */,
 				591F45631F33233A00612927 /* FFCacheManger.m in Sources */,
 				59A352F41F4D857800A1B5B2 /* FFEarningsInfo.m in Sources */,
+				D756409A1F54085E00313C25 /* FFEarnings.m in Sources */,
 				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
 				C705CB891F4EC899004D72E2 /* FFAssetApi.m in Sources */,
 				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
@@ -690,15 +726,19 @@
 				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
 				59BE6D001F4F13F8009DB119 /* NSString+AES.m in Sources */,
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
+				D75640A61F5412F200313C25 /* FFSiginInfo.m in Sources */,
 				593D3A011F4D267800E4912F /* UITableView+FF.m in Sources */,
 				59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */,
 				593D3A071F4D26A300E4912F /* UITextField+FF.m in Sources */,
 				593D3A0A1F4D26B700E4912F /* UIButton+FF.m in Sources */,
+				D75640A31F54112400313C25 /* FFCashActivityApi.m in Sources */,
 				599525801F4C054B001A85DE /* FFAlert.m in Sources */,
 				591F45661F33251F00612927 /* FFBasicApi+Animation.m in Sources */,
 				5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
+				D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */,
 				599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
 				593D3A0E1F4D283F00E4912F /* MBProgressHUD+FFXJ.m in Sources */,
+				D75640A01F540F0800313C25 /* FFActivityInfo.m in Sources */,
 				C705CB7F1F4D8669004D72E2 /* FFUserInfo.m in Sources */,
 				5978E7F41F4D6B2500E87D94 /* FFAboutInfo.m in Sources */,
 				59A352F71F4D8B2300A1B5B2 /* FFIndexInfo.m in Sources */,
@@ -713,6 +753,7 @@
 				599057501F32D43C00255F25 /* FFResponseObject.m in Sources */,
 				593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */,
 				599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */,
+				D75640A91F553B9400313C25 /* FFTradeApi.m in Sources */,
 				59054B111F3416CC00097FB5 /* FFHomeApi.m in Sources */,
 				C705CB821F4D8BA5004D72E2 /* FFOnlyValueInfo.m in Sources */,
 				593D39FB1F4D250400E4912F /* UIColor+FF.m in Sources */,
@@ -722,6 +763,7 @@
 				59D108C31F41A8DF00065F47 /* FFBasicVC.m in Sources */,
 				59BFCB541F4D539500CB8CB0 /* APITestVC.m in Sources */,
 				59A8F6731F4EC209005C464A /* RSAEncryptor.m in Sources */,
+				D706C5821F53FF2A00D0A21F /* NSObject+FF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

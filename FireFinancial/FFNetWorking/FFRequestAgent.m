@@ -8,6 +8,11 @@
 
 #import "FFRequestAgent.h"
 #import "FFServerConfig.h"
+#import "RSAEncryptor.h"
+#import <OpenUDID/OpenUDID.h>
+
+static NSString *const publicKey = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPrKMIntSVHnZJBudwhpNj/X6jo9VyeK4GK3db61VN1hsAbgiJvCEwLSSLXeJldvM5Ru6c1tVtWkkGATU2QXVpWHtvajqDFvZTPKI+Hb9P6RMZk2QWic49D1+heCeAuT96ZCEkjKNNAgd4ysVh6Aav9wpi5WSi45a99ljuKQuZpQIDAQAB";
+
 @implementation FFRequestAgent
 
 + (instancetype)shareInstance {
@@ -17,6 +22,7 @@
         instance = [[self alloc] init];
         instance.tasks = [NSMutableArray arrayWithCapacity:0];
         instance.manager = [self manager];
+        [instance setHTTPHeader];
     });
     return instance;
 }
@@ -27,6 +33,13 @@
     return manager;
 }
 
+- (void)setHTTPHeader {
+    [self.manager.requestSerializer setValue:@"" forHTTPHeaderField:@"appVersion"];
+    [self.manager.requestSerializer setValue:@"" forHTTPHeaderField:@"deviceToken"];
+    [self.manager.requestSerializer setValue:@"" forHTTPHeaderField:@"system"];
+    [self.manager.requestSerializer setValue:@"" forHTTPHeaderField:@"deviceType"];
+}
+
 - (void)asyncPostRequestWithUrl:(NSString *)url
                  parameters:(id)parameters
                   infoclass:(Class)infoclass
@@ -35,24 +48,25 @@
     FFServerConfig *config = [FFServerConfig instance];
     NSString *postUrl = [[config.serverIP stringByAppendingString:config.apiVersion]
                          stringByAppendingString:url];
-    NSLog(@"发起请求--%@",postUrl);
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
+    NSLog(@"发起请求--%@,参数--%@",postUrl, parameters);
+    NSMutableDictionary *taskDict = [NSMutableDictionary dictionaryWithCapacity:0];
     NSURLSessionDataTask *task = [self.manager POST:postUrl
-                                         parameters:parameters
+                                         parameters: [self commonParam:parameters]
                                            progress:^(NSProgress * _Nonnull uploadProgress) {
    }
                                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                                [wself.tasks removeObject:dict];
+                                                [wself.tasks removeObject:taskDict];
+                                                
                                                 finished(FFRequestStatusSuccess, responseObject);
        
    }
                                             failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                                [wself.tasks removeObject:dict];
+                                                [wself.tasks removeObject:taskDict];
                                                  finished(FFRequestStatusFail, error);
        
    }];
-    [dict setObject:task forKey:@(url.hash)];
-    [self.tasks addObject:dict];
+    [taskDict setObject:task forKey:@(url.hash)];
+    [self.tasks addObject:taskDict];
 }
 
 - (void)uploadImageWithUrl:(NSString *)url
@@ -120,5 +134,21 @@
         [self.tasks removeObject:removeTask];
     }
 }
+
+- (NSDictionary *)commonParam:(id)param {
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:param];
+    [dic setValue:[OpenUDID value] forKey:@"uuid"];
+    return dic;
+}
+
+- (NSDictionary *)rsaEncryptorWithParam:(id)param {
+    NSData *data = [NSJSONSerialization dataWithJSONObject:param options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *dicStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *rsaValue = [RSAEncryptor encryptString:dicStr publicKey:publicKey];
+    return @{@"i": rsaValue};
+    
+}
+
+
 
 @end
