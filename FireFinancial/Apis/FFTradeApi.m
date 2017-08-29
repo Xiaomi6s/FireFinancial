@@ -11,6 +11,8 @@
 #import "FFOnlyValueInfo.h"
 #import "FFInvestInfo.h"
 #import "FFLiquidTransferInfo.h"
+#import "FFTodayRateInfo.h"
+
 static NSString *const getRegularInvestListApi = @"/trade/getRegularInvestList";
 static NSString *const investApi = @"/trade/invest";
 static NSString *const investInfoApi = @"/trade/investInfo";
@@ -36,7 +38,7 @@ static NSString * const projectTodayRateApi = @"/project/todayRate";
                           returnBlock:(FinishedBlock)finished {
     NSDictionary *param = @{@"type":type};
 
-    [self asyncPostRequestWithUrl:projectTodayRateApi parameters:param infoclass:[FFRegisterShowInfo class] finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:projectTodayRateApi parameters:param infoclass:[FFTodayRateInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
     

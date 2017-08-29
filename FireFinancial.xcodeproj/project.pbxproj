@@ -52,12 +52,13 @@
 		C705CB731F4D5CD6004D72E2 /* FFBasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB721F4D5CD6004D72E2 /* FFBasicInfo.m */; };
 		C705CB7F1F4D8669004D72E2 /* FFUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */; };
 		C705CB821F4D8BA5004D72E2 /* FFOnlyValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */; };
-		C705CB861F4EC2BE004D72E2 /* FFWithdrawInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB851F4EC2BE004D72E2 /* FFWithdrawInfo.m */; };
 		C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
 		C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
 		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
 		C79031DD1F330440007333B6 /* UIView+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DC1F330440007333B6 /* UIView+FFExtension.m */; };
 		C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */; };
+		C7DDD34A1F5557370064D2EE /* FFTodayRateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3491F5557370064D2EE /* FFTodayRateInfo.m */; };
+		C7DDD34D1F5557400064D2EE /* FFWithdrawInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */; };
 		D706C5821F53FF2A00D0A21F /* NSObject+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = D706C5811F53FF2A00D0A21F /* NSObject+FF.m */; };
 		D756409A1F54085E00313C25 /* FFEarnings.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640991F54085E00313C25 /* FFEarnings.m */; };
 		D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D756409C1F540B0E00313C25 /* FFActivityApi.m */; };
@@ -179,8 +180,6 @@
 		C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUserInfo.m; sourceTree = "<group>"; };
 		C705CB801F4D8BA5004D72E2 /* FFOnlyValueInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFOnlyValueInfo.h; sourceTree = "<group>"; };
 		C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOnlyValueInfo.m; sourceTree = "<group>"; };
-		C705CB841F4EC2BE004D72E2 /* FFWithdrawInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWithdrawInfo.h; sourceTree = "<group>"; };
-		C705CB851F4EC2BE004D72E2 /* FFWithdrawInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWithdrawInfo.m; sourceTree = "<group>"; };
 		C79031D21F32FAB2007333B6 /* FFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtil.h; sourceTree = "<group>"; };
 		C79031D31F32FAB2007333B6 /* FFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtil.m; sourceTree = "<group>"; };
 		C79031D51F32FB93007333B6 /* NSString+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFExtension.h"; sourceTree = "<group>"; };
@@ -191,6 +190,10 @@
 		C79031DC1F330440007333B6 /* UIView+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFExtension.m"; sourceTree = "<group>"; };
 		C79031DE1F330A11007333B6 /* UIImage+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFExtension.h"; sourceTree = "<group>"; };
 		C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFExtension.m"; sourceTree = "<group>"; };
+		C7DDD3481F5557370064D2EE /* FFTodayRateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTodayRateInfo.h; sourceTree = "<group>"; };
+		C7DDD3491F5557370064D2EE /* FFTodayRateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTodayRateInfo.m; sourceTree = "<group>"; };
+		C7DDD34B1F5557400064D2EE /* FFWithdrawInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWithdrawInfo.h; sourceTree = "<group>"; };
+		C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWithdrawInfo.m; sourceTree = "<group>"; };
 		D706C5801F53FF2A00D0A21F /* NSObject+FF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FF.h"; sourceTree = "<group>"; };
 		D706C5811F53FF2A00D0A21F /* NSObject+FF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FF.m"; sourceTree = "<group>"; };
 		D75640981F54085E00313C25 /* FFEarnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEarnings.h; sourceTree = "<group>"; };
@@ -280,7 +283,6 @@
 				C705CB801F4D8BA5004D72E2 /* FFOnlyValueInfo.h */,
 				C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */,
 				D75640AE1F553F9E00313C25 /* Trade */,
-				C705CB831F4EC256004D72E2 /* Withdraw */,
 				C705CB7C1F4D8625004D72E2 /* User */,
 				5978E7F21F4D6B2500E87D94 /* FFAboutInfo.h */,
 				5978E7F31F4D6B2500E87D94 /* FFAboutInfo.m */,
@@ -471,21 +473,14 @@
 		C705CB7C1F4D8625004D72E2 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C7DDD34B1F5557400064D2EE /* FFWithdrawInfo.h */,
+				C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */,
 				C705CB7D1F4D8669004D72E2 /* FFUserInfo.h */,
 				C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */,
 				D75640981F54085E00313C25 /* FFEarnings.h */,
 				D75640991F54085E00313C25 /* FFEarnings.m */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		C705CB831F4EC256004D72E2 /* Withdraw */ = {
-			isa = PBXGroup;
-			children = (
-				C705CB841F4EC2BE004D72E2 /* FFWithdrawInfo.h */,
-				C705CB851F4EC2BE004D72E2 /* FFWithdrawInfo.m */,
-			);
-			path = Withdraw;
 			sourceTree = "<group>";
 		};
 		C79031CF1F32FA40007333B6 /* Tools */ = {
@@ -530,6 +525,8 @@
 		D75640AE1F553F9E00313C25 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
+				C7DDD3481F5557370064D2EE /* FFTodayRateInfo.h */,
+				C7DDD3491F5557370064D2EE /* FFTodayRateInfo.m */,
 				D75640AF1F553FC000313C25 /* FFTradeInfo.h */,
 				D75640B01F553FC000313C25 /* FFTradeInfo.m */,
 				D75640B21F5546BB00313C25 /* FFInvestInfo.h */,
@@ -740,12 +737,12 @@
 				D756409A1F54085E00313C25 /* FFEarnings.m in Sources */,
 				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
 				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
-				C705CB861F4EC2BE004D72E2 /* FFWithdrawInfo.m in Sources */,
 				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
 				59BE6D001F4F13F8009DB119 /* NSString+AES.m in Sources */,
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
 				D75640A61F5412F200313C25 /* FFSiginInfo.m in Sources */,
 				593D3A011F4D267800E4912F /* UITableView+FF.m in Sources */,
+				C7DDD34A1F5557370064D2EE /* FFTodayRateInfo.m in Sources */,
 				59D38BC51F4C104D00EFC08C /* NSLayoutConstraint+FFExtension.m in Sources */,
 				593D3A071F4D26A300E4912F /* UITextField+FF.m in Sources */,
 				593D3A0A1F4D26B700E4912F /* UIButton+FF.m in Sources */,
@@ -753,6 +750,7 @@
 				599525801F4C054B001A85DE /* FFAlert.m in Sources */,
 				591F45661F33251F00612927 /* FFBasicApi+Animation.m in Sources */,
 				5990570B1F32D36E00255F25 /* AppDelegate.m in Sources */,
+				C7DDD34D1F5557400064D2EE /* FFWithdrawInfo.m in Sources */,
 				D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */,
 				599057511F32D43D00255F25 /* FFServerConfig.m in Sources */,
 				593D3A0E1F4D283F00E4912F /* MBProgressHUD+FFXJ.m in Sources */,
