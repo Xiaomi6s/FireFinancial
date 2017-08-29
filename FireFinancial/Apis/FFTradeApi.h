@@ -20,6 +20,15 @@
                           returnBlock:(FinishedBlock)finished;
 
 /**
+ 获取定期投资项目的回款时间轴信息
+
+ @param investId 定期项目id
+ @param finished 回调
+ */
+- (void)getRegularBackMoneyTimeLineWithInvestId:(NSString *)investId
+                                    returnBlock:(FinishedBlock)finished;
+
+/**
  查询定期投资项目列表
 
  @param pid 投资的项目id 用于分页查询，上一次返回的列表中最后一个的id

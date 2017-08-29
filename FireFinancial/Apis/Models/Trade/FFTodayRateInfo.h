@@ -12,12 +12,12 @@
 /**
  利率
  */
-@property(nonatomic, copy) NSString *rate;
+@property (nonatomic, copy) NSString *rate;
 
 /**
  日期
  */
-@property(nonatomic, copy) NSString *date;
+@property (nonatomic, copy) NSString *date;
 
 
 @end

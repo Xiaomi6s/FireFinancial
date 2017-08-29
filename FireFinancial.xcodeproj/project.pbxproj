@@ -59,6 +59,7 @@
 		C79031E01F330A11007333B6 /* UIImage+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031DF1F330A11007333B6 /* UIImage+FFExtension.m */; };
 		C7DDD34A1F5557370064D2EE /* FFTodayRateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3491F5557370064D2EE /* FFTodayRateInfo.m */; };
 		C7DDD34D1F5557400064D2EE /* FFWithdrawInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */; };
+		C7DDD3501F555E760064D2EE /* FFRegularTimeLineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD34F1F555E760064D2EE /* FFRegularTimeLineInfo.m */; };
 		D706C5821F53FF2A00D0A21F /* NSObject+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = D706C5811F53FF2A00D0A21F /* NSObject+FF.m */; };
 		D756409A1F54085E00313C25 /* FFEarnings.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640991F54085E00313C25 /* FFEarnings.m */; };
 		D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D756409C1F540B0E00313C25 /* FFActivityApi.m */; };
@@ -194,6 +195,8 @@
 		C7DDD3491F5557370064D2EE /* FFTodayRateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTodayRateInfo.m; sourceTree = "<group>"; };
 		C7DDD34B1F5557400064D2EE /* FFWithdrawInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWithdrawInfo.h; sourceTree = "<group>"; };
 		C7DDD34C1F5557400064D2EE /* FFWithdrawInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWithdrawInfo.m; sourceTree = "<group>"; };
+		C7DDD34E1F555E760064D2EE /* FFRegularTimeLineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRegularTimeLineInfo.h; sourceTree = "<group>"; };
+		C7DDD34F1F555E760064D2EE /* FFRegularTimeLineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRegularTimeLineInfo.m; sourceTree = "<group>"; };
 		D706C5801F53FF2A00D0A21F /* NSObject+FF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FF.h"; sourceTree = "<group>"; };
 		D706C5811F53FF2A00D0A21F /* NSObject+FF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FF.m"; sourceTree = "<group>"; };
 		D75640981F54085E00313C25 /* FFEarnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEarnings.h; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 				D75640B31F5546BB00313C25 /* FFInvestInfo.m */,
 				D75640B51F554F0100313C25 /* FFLiquidTransferInfo.h */,
 				D75640B61F554F0100313C25 /* FFLiquidTransferInfo.m */,
+				C7DDD34E1F555E760064D2EE /* FFRegularTimeLineInfo.h */,
+				C7DDD34F1F555E760064D2EE /* FFRegularTimeLineInfo.m */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 				599057081F32D36E00255F25 /* main.m in Sources */,
 				5990574E1F32D43C00255F25 /* FFBasicApi.m in Sources */,
 				599057501F32D43C00255F25 /* FFResponseObject.m in Sources */,
+				C7DDD3501F555E760064D2EE /* FFRegularTimeLineInfo.m in Sources */,
 				593D3A041F4D268C00E4912F /* UILabel+FF.m in Sources */,
 				599525831F4C054B001A85DE /* FFScrollSliderView.m in Sources */,
 				D75640A91F553B9400313C25 /* FFTradeApi.m in Sources */,

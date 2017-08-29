@@ -12,6 +12,7 @@
 #import "FFInvestInfo.h"
 #import "FFLiquidTransferInfo.h"
 #import "FFTodayRateInfo.h"
+#import "FFRegularTimeLineInfo.h"
 
 static NSString *const getRegularInvestListApi = @"/trade/getRegularInvestList";
 static NSString *const investApi = @"/trade/invest";
@@ -43,6 +44,22 @@ static NSString * const projectTodayRateApi = @"/project/todayRate";
     }];
     
 }
+
+/**
+ 获取定期投资项目的回款时间轴信息
+ 
+ @param investId 定期项目id
+ @param finished 回调
+ */
+- (void)getRegularBackMoneyTimeLineWithInvestId:(NSString *)investId
+                                    returnBlock:(FinishedBlock)finished {
+    NSDictionary *param = @{@"investId":investId};
+    
+    [self asyncPostRequestWithUrl:projectTodayRateApi parameters:param infoclass:[FFRegularTimeLineInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
 
 - (void)getRegularInvestListWithPid:(NSString *)pid
                            finished:(FinishedBlock)finished {
