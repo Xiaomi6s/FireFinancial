@@ -68,6 +68,7 @@
 		D75640B11F553FC000313C25 /* FFTradeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640B01F553FC000313C25 /* FFTradeInfo.m */; };
 		D75640B41F5546BB00313C25 /* FFInvestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640B31F5546BB00313C25 /* FFInvestInfo.m */; };
 		D75640B71F554F0100313C25 /* FFLiquidTransferInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640B61F554F0100313C25 /* FFLiquidTransferInfo.m */; };
+		D785E55C1F55552800A124B7 /* FFRegularTransferInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D785E55B1F55552800A124B7 /* FFRegularTransferInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		D75640B31F5546BB00313C25 /* FFInvestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInvestInfo.m; sourceTree = "<group>"; };
 		D75640B51F554F0100313C25 /* FFLiquidTransferInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLiquidTransferInfo.h; sourceTree = "<group>"; };
 		D75640B61F554F0100313C25 /* FFLiquidTransferInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLiquidTransferInfo.m; sourceTree = "<group>"; };
+		D785E55A1F55552800A124B7 /* FFRegularTransferInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRegularTransferInfo.h; sourceTree = "<group>"; };
+		D785E55B1F55552800A124B7 /* FFRegularTransferInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRegularTransferInfo.m; sourceTree = "<group>"; };
 		F85FC7A1CB19899F9F84A42D /* Pods-FireFinancial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFinancial.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireFinancial/Pods-FireFinancial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -536,6 +539,8 @@
 				D75640B31F5546BB00313C25 /* FFInvestInfo.m */,
 				D75640B51F554F0100313C25 /* FFLiquidTransferInfo.h */,
 				D75640B61F554F0100313C25 /* FFLiquidTransferInfo.m */,
+				D785E55A1F55552800A124B7 /* FFRegularTransferInfo.h */,
+				D785E55B1F55552800A124B7 /* FFRegularTransferInfo.m */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -740,6 +745,7 @@
 				D756409A1F54085E00313C25 /* FFEarnings.m in Sources */,
 				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
 				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
+				D785E55C1F55552800A124B7 /* FFRegularTransferInfo.m in Sources */,
 				C705CB861F4EC2BE004D72E2 /* FFWithdrawInfo.m in Sources */,
 				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
 				59BE6D001F4F13F8009DB119 /* NSString+AES.m in Sources */,

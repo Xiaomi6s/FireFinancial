@@ -11,6 +11,7 @@
 #import "FFOnlyValueInfo.h"
 #import "FFInvestInfo.h"
 #import "FFLiquidTransferInfo.h"
+#import "FFRegularTransferInfo.h"
 static NSString *const getRegularInvestListApi = @"/trade/getRegularInvestList";
 static NSString *const investApi = @"/trade/invest";
 static NSString *const investInfoApi = @"/trade/investInfo";
@@ -84,6 +85,26 @@ static NSString *const getTransferListApi = @"/trade/getTransferList";
     [self asyncPostRequestWithUrl:liquidTransferSubmitApi
                        parameters:param
                         infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+- (void)regularTransferSendCaptchaWithFinisd:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:regularTransferSendCaptchaApi
+                       parameters:nil
+                        infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+- (void)regularTransferLoadingWithlastId:(NSString *)lastId
+                                finished:(FinishedBlock)finished {
+    NSDictionary *param = @{@"lastId": lastId};
+    [self asyncPostRequestWithUrl:regularTransferLoadingApi
+                       parameters:param
+                        infoclass:[FFRegularTransferInfo class]
                          finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];

@@ -17,8 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     FFUserApi *userApi = [FFUserApi new];
-    [userApi loginWithPhone:@"15800436830" password:@"123456a" returnBlock:^(FFRequestStatus status, id response) {
+    [userApi loginWithPhone:@"17101234567" password:@"123456" returnBlock:^(FFRequestStatus status, id response) {
         
     }];
     
