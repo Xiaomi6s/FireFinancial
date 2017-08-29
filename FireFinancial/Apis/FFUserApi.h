@@ -107,5 +107,23 @@
 - (void)uploadAvatarWithImage:(UIImage *)image
                   returnBlock:(FinishedBlock)finished;
 
+/**
+ 获取提现页面信息
+ 
+ @param finished 回调
+ */
+- (void)getWithdrawInfoWithReturnBlock:(FinishedBlock)finished;
+
+/**
+ 确认提现
+ 
+ @param bankId 银行id号
+ @param withdrawMoney 提现金额
+ @param finished 回调
+ */
+- (void)withdrawConfirmWithBankId:(NSString *)bankId
+                    withdrawMoney:(NSString *)withdrawMoney
+                      returnBlock:(FinishedBlock)finished;
+
 
 @end

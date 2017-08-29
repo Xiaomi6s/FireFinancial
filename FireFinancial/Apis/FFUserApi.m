@@ -7,6 +7,7 @@
 //
 
 #import "FFUserApi.h"
+#import "FFWithdrawInfo.h"
 
 static NSString * const findPasswordApi = @"/user/findPassword";
 static NSString * const getUserInfoApi = @"/user/myInfo";
@@ -15,6 +16,8 @@ static NSString * const registerApi = @"/user/register";
 static NSString * const registerShowApi = @"/user/registerShow";
 static NSString * const getValidateCodeApi = @"/user/getValidateCode";
 static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
+static NSString * const withdrawLoadingInfoApi = @"/user/withdrawLoadingInfo";
+static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
 
 
 @implementation FFUserApi
@@ -167,5 +170,35 @@ static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
         finished(status, response);
     }];
 }
+
+/**
+ 获取提现页面信息
+ 
+ @param finished 回调
+ */
+- (void)getWithdrawInfoWithReturnBlock:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:withdrawLoadingInfoApi parameters:nil infoclass:[FFWithdrawInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+/**
+ 确认提现
+ 
+ @param bankId 银行id号
+ @param withdrawMoney 提现金额
+ @param finished 回调
+ */
+- (void)withdrawConfirmWithBankId:(NSString *)bankId
+                    withdrawMoney:(NSString *)withdrawMoney
+                      returnBlock:(FinishedBlock)finished{
+    NSDictionary *param = @{@"bankId":bankId,@"withdrawMoney":withdrawMoney};
+    
+    [self asyncPostRequestWithUrl:withdrawConfirmApi parameters:param infoclass:nil finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+    
+}
+
 
 @end

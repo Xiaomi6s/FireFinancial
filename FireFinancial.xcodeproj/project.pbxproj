@@ -53,7 +53,6 @@
 		C705CB7F1F4D8669004D72E2 /* FFUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB7E1F4D8669004D72E2 /* FFUserInfo.m */; };
 		C705CB821F4D8BA5004D72E2 /* FFOnlyValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */; };
 		C705CB861F4EC2BE004D72E2 /* FFWithdrawInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB851F4EC2BE004D72E2 /* FFWithdrawInfo.m */; };
-		C705CB891F4EC899004D72E2 /* FFAssetApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C705CB881F4EC899004D72E2 /* FFAssetApi.m */; };
 		C79031D41F32FAB2007333B6 /* FFUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D31F32FAB2007333B6 /* FFUtil.m */; };
 		C79031D71F32FB93007333B6 /* NSString+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D61F32FB93007333B6 /* NSString+FFExtension.m */; };
 		C79031DA1F32FF26007333B6 /* UIColor+FFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C79031D91F32FF26007333B6 /* UIColor+FFExtension.m */; };
@@ -172,8 +171,6 @@
 		C705CB811F4D8BA5004D72E2 /* FFOnlyValueInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOnlyValueInfo.m; sourceTree = "<group>"; };
 		C705CB841F4EC2BE004D72E2 /* FFWithdrawInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWithdrawInfo.h; sourceTree = "<group>"; };
 		C705CB851F4EC2BE004D72E2 /* FFWithdrawInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWithdrawInfo.m; sourceTree = "<group>"; };
-		C705CB871F4EC899004D72E2 /* FFAssetApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAssetApi.h; sourceTree = "<group>"; };
-		C705CB881F4EC899004D72E2 /* FFAssetApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAssetApi.m; sourceTree = "<group>"; };
 		C79031D21F32FAB2007333B6 /* FFUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtil.h; sourceTree = "<group>"; };
 		C79031D31F32FAB2007333B6 /* FFUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtil.m; sourceTree = "<group>"; };
 		C79031D51F32FB93007333B6 /* NSString+FFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFExtension.h"; sourceTree = "<group>"; };
@@ -222,8 +219,6 @@
 				C705CB6C1F4D5377004D72E2 /* FFUserApi.m */,
 				59054B0F1F3416CC00097FB5 /* FFHomeApi.h */,
 				59054B101F3416CC00097FB5 /* FFHomeApi.m */,
-				C705CB871F4EC899004D72E2 /* FFAssetApi.h */,
-				C705CB881F4EC899004D72E2 /* FFAssetApi.m */,
 				59BFCB561F4D5CB500CB8CB0 /* FFAboutApi.h */,
 				59BFCB571F4D5CB500CB8CB0 /* FFAboutApi.m */,
 				59BFCB4F1F4D537900CB8CB0 /* apis.plist */,
@@ -684,7 +679,6 @@
 				591F45631F33233A00612927 /* FFCacheManger.m in Sources */,
 				59A352F41F4D857800A1B5B2 /* FFEarningsInfo.m in Sources */,
 				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
-				C705CB891F4EC899004D72E2 /* FFAssetApi.m in Sources */,
 				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
 				C705CB861F4EC2BE004D72E2 /* FFWithdrawInfo.m in Sources */,
 				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
