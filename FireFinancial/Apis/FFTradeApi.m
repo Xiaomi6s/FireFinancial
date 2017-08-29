@@ -78,4 +78,15 @@ static NSString *const getTransferListApi = @"/trade/getTransferList";
     }];
 }
 
+- (void)liquidTransferSubmitWithMoney:(NSString *)money
+                             finished:(FinishedBlock)finished {
+    NSDictionary *param = @{@"money": money};
+    [self asyncPostRequestWithUrl:liquidTransferSubmitApi
+                       parameters:param
+                        infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
 @end

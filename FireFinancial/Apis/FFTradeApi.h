@@ -51,4 +51,21 @@
 - (void)cancelInvestWithDealId:(NSString *)dealId
                       finished:(FinishedBlock)finished;
 
+/**
+ 零火宝变现加载页API
+
+ @param finished finished description
+ */
+- (void)liquidTransferLoadingWithFinished:(FinishedBlock)finished;
+
+
+/**
+ 活期变现提交API
+
+ @param money 变现金额
+ @param finished finished description
+ */
+- (void)liquidTransferSubmitWithMoney:(NSString *)money
+                             finished:(FinishedBlock)finished;
+
 @end

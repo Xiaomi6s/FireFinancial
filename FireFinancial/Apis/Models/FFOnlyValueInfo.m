@@ -19,3 +19,9 @@
 @implementation FFRegisterShowInfo
 
 @end
+
+@implementation FFDealInfo
+
+
+
+@end
