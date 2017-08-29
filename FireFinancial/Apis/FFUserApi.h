@@ -108,6 +108,23 @@
                   returnBlock:(FinishedBlock)finished;
 
 /**
+ 获取提现页面信息
+ 
+ @param finished 回调
+ */
+- (void)getWithdrawInfoWithReturnBlock:(FinishedBlock)finished;
+
+/**
+ 确认提现
+ 
+ @param bankId 银行id号
+ @param withdrawMoney 提现金额
+ @param finished 回调
+ */
+- (void)withdrawConfirmWithBankId:(NSString *)bankId
+                    withdrawMoney:(NSString *)withdrawMoney
+                      returnBlock:(FinishedBlock)finished;
+/**
  每日收益（每日收益总计、每日收益零火宝、每日收益定期宝）
 
  @param lastDate 最后一条收益的日期 （例：2015-09-19） 为空时为前一天日期

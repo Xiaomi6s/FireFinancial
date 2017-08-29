@@ -35,7 +35,6 @@
 
 @interface FFWithdrawInfo : FFBasicInfo
 
-
 /**
  账户余额
  */

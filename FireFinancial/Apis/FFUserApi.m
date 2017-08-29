@@ -7,6 +7,7 @@
 //
 
 #import "FFUserApi.h"
+#import "FFWithdrawInfo.h"
 
 #import "FFEarnings.h"
 
@@ -18,7 +19,10 @@ static NSString * const loginApi = @"/user/login";
 static NSString * const registerShowApi = @"/user/registerShow";
 static NSString * const getValidateCodeApi = @"/user/getValidateCode";
 static NSString * const uploadAvatarApi = @"/user/uploadAvatar";
+static NSString * const withdrawLoadingInfoApi = @"/user/withdrawLoadingInfo";
+static NSString * const withdrawConfirmApi = @"/user/withdrawRequest";
 static NSString * const earningsListApi = @"/user/earningsList";
+
 
 
 @implementation FFUserApi
@@ -172,6 +176,35 @@ static NSString * const earningsListApi = @"/user/earningsList";
     }];
 }
 
+/**
+ 获取提现页面信息
+ 
+ @param finished 回调
+ */
+- (void)getWithdrawInfoWithReturnBlock:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:withdrawLoadingInfoApi parameters:nil infoclass:[FFWithdrawInfo class] finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+}
+
+/**
+ 确认提现
+ 
+ @param bankId 银行id号
+ @param withdrawMoney 提现金额
+ @param finished 回调
+ */
+- (void)withdrawConfirmWithBankId:(NSString *)bankId
+                    withdrawMoney:(NSString *)withdrawMoney
+                      returnBlock:(FinishedBlock)finished{
+    NSDictionary *param = @{@"bankId":bankId,@"withdrawMoney":withdrawMoney};
+    
+    [self asyncPostRequestWithUrl:withdrawConfirmApi parameters:param infoclass:nil finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
+    
+}
+
 - (void)earningsListWithlastDate:(NSString *)lastDate
                         finished:(FinishedBlock)finished {
     NSDictionary *param = @{@"lastDate": lastDate};
@@ -179,8 +212,9 @@ static NSString * const earningsListApi = @"/user/earningsList";
                        parameters:param
                         infoclass:[FFEarnings class]
                          finished:^(FFRequestStatus status, id response) {
-        finished(status, response);
-    }];
+                             finished(status, response);
+                         }];
 }
+
 
 @end
