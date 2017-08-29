@@ -29,3 +29,14 @@
 @property (nonatomic, copy) NSString *showContent;
 
 @end
+
+@interface FFDealInfo : FFBasicInfo
+
+/**
+ 活期预约中项目id
+ */
+@property (nonatomic, copy) NSString *dealId;
+
+@end
+
+
