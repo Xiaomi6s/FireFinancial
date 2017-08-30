@@ -171,5 +171,23 @@
  */
 - (void)captchaApiWithFinished:(FinishedBlock)finished;
 
+/** 获取消息和公告列表
+
+ @param messageId 消息id 分页用 第一次传空字符串
+ @param type 1公告 2消息
+ */
+- (void)getMessageListWithMessageId:(NSString *)messageId
+                               type:(NSString *)type
+                        returnBlock:(FinishedBlock)finished;
+
+/**
+ 更新消息状态为已读
+
+ @param ids “19,21,245”
+ @param finished 回调
+ */
+- (void)updateMessageStatusWithMessageIds:(NSString *)ids
+                              returnBlock:(FinishedBlock)finished;
+
 
 @end
