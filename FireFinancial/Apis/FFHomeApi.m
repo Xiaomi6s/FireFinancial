@@ -8,6 +8,7 @@
 
 #import "FFHomeApi.h"
 #import "FFRequestTypedef.h"
+#import "FFIndexInfo.h"
 
 
 static NSString * const homeApi = @"/hlc/home/index";
@@ -15,7 +16,7 @@ static NSString * const homeApi = @"/hlc/home/index";
 @implementation FFHomeApi
 
 - (void)getHomeIndexWithFinished:(FinishedBlock)finished {
-    [self asyncPostRequestWithUrl:homeApi parameters:nil infoclass:nil finished:^(FFRequestStatus status, id response) {
+    [self asyncPostRequestWithUrl:homeApi parameters:nil infoclass:[FFIndexInfo class] finished:^(FFRequestStatus status, id response) {
         finished(status, response);
     }];
 }

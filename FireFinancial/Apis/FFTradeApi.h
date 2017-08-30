@@ -93,4 +93,13 @@
  */
 - (void)regularTransferSendCaptchaWithFinisd:(FinishedBlock)finished;
 
+/**
+ 项目详情接口API
+
+ @param productId 项目id
+ @param finished 回调
+ */
+- (void)getProjectDetailWithProductId:(NSString *)productId
+                             finished:(FinishedBlock)finished;
+
 @end

@@ -14,6 +14,7 @@
 #import "FFRegularTransferInfo.h"
 #import "FFTodayRateInfo.h"
 #import "FFRegularTimeLineInfo.h"
+#import "FFProjectDetailInfo.h"
 
 static NSString *const getRegularInvestListApi = @"/trade/getRegularInvestList";
 static NSString *const investApi = @"/trade/invest";
@@ -27,6 +28,7 @@ static NSString *const regularTransferSubmitApi = @"/trade/regularTransferSubmit
 static NSString *const getTransferListApi = @"/trade/getTransferList";
 
 static NSString * const projectTodayRateApi = @"/project/todayRate";
+static NSString * const projectDetailApi = @"/project/detail";
 
 @implementation FFTradeApi
 
@@ -147,4 +149,22 @@ static NSString * const projectTodayRateApi = @"/project/todayRate";
     }];
 }
 
+/**
+ 项目详情接口API
+ 
+ @param productId 项目id
+ @param finished 回调
+ */
+- (void)getProjectDetailWithProductId:(NSString *)productId
+                             finished:(FinishedBlock)finished {
+    
+    NSDictionary *param = @{@"productId": productId};
+    [self asyncPostRequestWithUrl:projectDetailApi
+                       parameters:param
+                        infoclass:[FFProjectDetailInfo class]
+                         finished:^(FFRequestStatus status, id response) {
+                             finished(status, response);
+                         }];
+
+}
 @end

@@ -63,6 +63,7 @@
 		C7DDD3531F5561280064D2EE /* FFUserAssetInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3521F5561280064D2EE /* FFUserAssetInfo.m */; };
 		C7DDD3561F556C3E0064D2EE /* FFRechargeLodingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3551F556C3E0064D2EE /* FFRechargeLodingInfo.m */; };
 		C7DDD3591F5582840064D2EE /* FFMessageListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD3581F5582840064D2EE /* FFMessageListInfo.m */; };
+		C7DDD35C1F5588560064D2EE /* FFProjectDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD35B1F5588560064D2EE /* FFProjectDetailInfo.m */; };
 		D706C5821F53FF2A00D0A21F /* NSObject+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = D706C5811F53FF2A00D0A21F /* NSObject+FF.m */; };
 		D756409A1F54085E00313C25 /* FFEarnings.m in Sources */ = {isa = PBXBuildFile; fileRef = D75640991F54085E00313C25 /* FFEarnings.m */; };
 		D756409D1F540B0E00313C25 /* FFActivityApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D756409C1F540B0E00313C25 /* FFActivityApi.m */; };
@@ -207,6 +208,8 @@
 		C7DDD3551F556C3E0064D2EE /* FFRechargeLodingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRechargeLodingInfo.m; sourceTree = "<group>"; };
 		C7DDD3571F5582840064D2EE /* FFMessageListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMessageListInfo.h; sourceTree = "<group>"; };
 		C7DDD3581F5582840064D2EE /* FFMessageListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMessageListInfo.m; sourceTree = "<group>"; };
+		C7DDD35A1F5588560064D2EE /* FFProjectDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFProjectDetailInfo.h; sourceTree = "<group>"; };
+		C7DDD35B1F5588560064D2EE /* FFProjectDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFProjectDetailInfo.m; sourceTree = "<group>"; };
 		D706C5801F53FF2A00D0A21F /* NSObject+FF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FF.h"; sourceTree = "<group>"; };
 		D706C5811F53FF2A00D0A21F /* NSObject+FF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FF.m"; sourceTree = "<group>"; };
 		D75640981F54085E00313C25 /* FFEarnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEarnings.h; sourceTree = "<group>"; };
@@ -558,6 +561,8 @@
 				D785E55B1F55552800A124B7 /* FFRegularTransferInfo.m */,
 				C7DDD34E1F555E760064D2EE /* FFRegularTimeLineInfo.h */,
 				C7DDD34F1F555E760064D2EE /* FFRegularTimeLineInfo.m */,
+				C7DDD35A1F5588560064D2EE /* FFProjectDetailInfo.h */,
+				C7DDD35B1F5588560064D2EE /* FFProjectDetailInfo.m */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
@@ -762,8 +767,8 @@
 				D756409A1F54085E00313C25 /* FFEarnings.m in Sources */,
 				C705CB6D1F4D5377004D72E2 /* FFUserApi.m in Sources */,
 				599525811F4C054B001A85DE /* FFGenView.m in Sources */,
+				C7DDD35C1F5588560064D2EE /* FFProjectDetailInfo.m in Sources */,
 				D785E55C1F55552800A124B7 /* FFRegularTransferInfo.m in Sources */,
-				C705CB861F4EC2BE004D72E2 /* FFWithdrawInfo.m in Sources */,
 				59BFCB581F4D5CB500CB8CB0 /* FFAboutApi.m in Sources */,
 				59BE6D001F4F13F8009DB119 /* NSString+AES.m in Sources */,
 				5990570E1F32D36E00255F25 /* ViewController.m in Sources */,
