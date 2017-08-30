@@ -164,5 +164,12 @@
                            businessNo:(NSString *)businessNo
                           returnBlock:(FinishedBlock)finished;
 
+/**
+ 注册第一步接口：获取图形验证码
+
+ @param finished finished description
+ */
+- (void)captchaApiWithFinished:(FinishedBlock)finished;
+
 
 @end

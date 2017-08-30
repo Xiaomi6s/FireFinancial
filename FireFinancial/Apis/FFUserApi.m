@@ -26,6 +26,7 @@ static NSString * const earningsListApi = @"/user/earningsList";
 static NSString * const queryPayResultApi = @"/user/queryPayResult";
 static NSString * const userAssetApi = @"/user/asset";
 static NSString * const userRechargeApi = @"/user/recharge";
+static NSString * const captchaApi = @"/register/captcha";
 
 @implementation FFUserApi
 
@@ -298,6 +299,15 @@ static NSString * const userRechargeApi = @"/user/recharge";
                              finished(status, response);
                          }];
     
+}
+
+- (void)captchaApiWithFinished:(FinishedBlock)finished {
+    [self asyncPostRequestWithUrl:captchaApi
+                       parameters:nil
+                        infoclass:nil
+                         finished:^(FFRequestStatus status, id response) {
+        finished(status, response);
+    }];
 }
 
 @end

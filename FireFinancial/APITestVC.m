@@ -19,9 +19,13 @@
     [super viewDidLoad];
     
     FFUserApi *userApi = [FFUserApi new];
-    [userApi loginWithPhone:@"17101234567" password:@"123456" returnBlock:^(FFRequestStatus status, id response) {
+    [userApi captchaApiWithFinished:^(FFRequestStatus status, id response) {
         
     }];
+    
+//    [userApi loginWithPhone:@"17101234567" password:@"123456" returnBlock:^(FFRequestStatus status, id response) {
+//        
+//    }];
     
 }
 
